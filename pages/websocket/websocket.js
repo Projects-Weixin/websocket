@@ -1,3 +1,4 @@
+let socket
 Page({
 
   /**
@@ -8,7 +9,7 @@ Page({
   },
 
   sendMsg:function () {
-    wx.sendSocketMessage({
+    socket.send({
       data:'socket send message success--------来自小程序'
     })
   },
@@ -19,8 +20,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      wx.connectSocket({
-        url: 'ws://192.168.1.102:5566/',
+    socket = wx.connectSocket({
+        url: 'ws://192.168.1.102:8080/',
         // header: {
         //   'content-type': 'application/json'
         // },
@@ -36,22 +37,34 @@ Page({
           console.log('socket连接完成：' + res)
         },
       })
+    socket.onOpen(function (header) {
+      console.log('socket已打开：' + header)
+    })
+    socket.onError(function (errMsg) {
+      console.log('socket出现错误：' + errMsg)
+    })
+    socket.onClose(function (res) {
+      console.log('socket关闭：' + res)
+    })
+    socket.onMessage(function (data) {
+      console.log('socket接收了消息：' + data)
+    })
       // wx.connectSocket({
       //   // url: 'ws://127.0.0.1:8080/',
       //   url: 'ws://192.168.1.102:8088/',
       // })
-      wx.onSocketOpen(function(res) {
-        console.log('socket已打开：'+res)
-      })
-      wx.onSocketError(function(res) {
-        console.log('socket出现错误：'+res)
-      })
-      wx.onSocketClose(function(res) {
-        console.log('socket关闭：'+res)
-      })
-      wx.onSocketMessage(function(res){
-        console.log('socket接收了消息：' +res)
-      })
+      // wx.onSocketOpen(function(res) {
+      //   console.log('socket已打开：'+res)
+      // })
+      // wx.onSocketError(function(res) {
+      //   console.log('socket出现错误：'+res)
+      // })
+      // wx.onSocketClose(function(res) {
+      //   console.log('socket关闭：'+res)
+      // })
+      // wx.onSocketMessage(function(res){
+      //   console.log('socket接收了消息：' +res)
+      // })
   },
 
   /**
