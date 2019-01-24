@@ -1,0 +1,3 @@
+<button bindtap='sendMsg'>
+发送消息
+</button>

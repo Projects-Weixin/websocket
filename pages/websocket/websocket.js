@@ -7,7 +7,11 @@ Page({
     
   },
 
-  
+  sendMsg:function () {
+    wx.sendSocketMessage({
+      data:'socket send message success--------来自小程序'
+    })
+  },
 
 
 
@@ -19,10 +23,10 @@ Page({
         url: 'ws://127.0.0.1:8080/',
       })
       wx.onSocketOpen(function(res) {
-        console.log(res)
+        console.log('socket已打开：'+res)
       })
       wx.onSocketMessage(function(res){
-        console.log(res)
+        console.log('socket接收了消息：' +res)
       })
   },
 
