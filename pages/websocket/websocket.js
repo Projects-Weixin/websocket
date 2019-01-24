@@ -20,10 +20,34 @@ Page({
    */
   onLoad: function (options) {
       wx.connectSocket({
-        url: 'ws://127.0.0.1:8080/',
+        url: 'ws://192.168.1.102:5566/',
+        // header: {
+        //   'content-type': 'application/json'
+        // },
+        // protocols: ['protocol1'],
+        // method: 'GET',
+        success: function(res) {
+          console.log('socket连接成功：' + res)
+        },
+        fail: function(res) {
+          console.log('socket连接失败：' + res)
+        },
+        complete: function(res) {
+          console.log('socket连接完成：' + res)
+        },
       })
+      // wx.connectSocket({
+      //   // url: 'ws://127.0.0.1:8080/',
+      //   url: 'ws://192.168.1.102:8088/',
+      // })
       wx.onSocketOpen(function(res) {
         console.log('socket已打开：'+res)
+      })
+      wx.onSocketError(function(res) {
+        console.log('socket出现错误：'+res)
+      })
+      wx.onSocketClose(function(res) {
+        console.log('socket关闭：'+res)
       })
       wx.onSocketMessage(function(res){
         console.log('socket接收了消息：' +res)

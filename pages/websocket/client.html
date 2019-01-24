@@ -43,23 +43,23 @@
 
 
 
-<!DOCTYPE HTML>  
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>websocket</title>  
+    <title>websocket</title>
     <style type="text/css">
-        
+
     </style>
 </head>
 <body>
     <div id="connected"></div>
-    
+
     <script type="text/javascript">
              function sendMessage() {
-                socket.send("socket send message success--------来自浏览器);
+                socket.send("socket send message success--------来自浏览器");
               }
-       
+
           var onOpen = function() {
                 console.log("Socket opened.");
                 socket.send("Hi, Server!");
@@ -74,7 +74,7 @@
             onError = function() {
                 console.log("We got an error.");
             },
-            
+
             socket = new WebSocket("ws://127.0.0.1:8080/");
         socket.onopen = onOpen;
         socket.onclose = onClose;
@@ -85,6 +85,6 @@
       <button type="button" id="send" class="btn btn-primary"
             onclick="sendMessage();">
           Send!
-        </button>
+      </button>
 </body>
 </html>

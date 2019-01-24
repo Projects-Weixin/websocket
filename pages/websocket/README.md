@@ -10,3 +10,7 @@
 2、浏览器运行：client.html
 ---
 3、停止服务：control+c
+
+安装socket测试工具
+1、https://github.com/joymakee/macSocketServer
+2、https://juejin.im/post/5a77cb456fb9a0634e6c6c14
