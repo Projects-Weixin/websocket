@@ -11,6 +11,6 @@
     <text class="user-motto">{{motto}}</text>
   </view>
   <view catchtap='bindSocketViewTap'>
-      <text>进入websocket</text>  
+      <text>进入回话页面</text>  
   </view>
 </view>

@@ -2,7 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/websocket/websocket"
+    "pages/chat/chat"
   ],
   "window":{
     "backgroundTextStyle":"light",

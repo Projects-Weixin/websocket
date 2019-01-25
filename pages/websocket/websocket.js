@@ -1,4 +1,4 @@
-let socket
+let socketTask
 Page({
 
   /**
@@ -9,8 +9,9 @@ Page({
   },
 
   sendMsg:function () {
-    socket.send({
-      data:'socket send message success--------来自小程序'
+    socketTask.send({
+      data: JSON.stringify('socket send message success--------来自小程序')
+      // data:'socket send message success--------来自小程序'
     })
   },
 
@@ -20,34 +21,36 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    socket = wx.connectSocket({
-        url: 'ws://192.168.1.102:8080/',
-        // header: {
-        //   'content-type': 'application/json'
-        // },
-        // protocols: ['protocol1'],
-        // method: 'GET',
+    socketTask = wx.connectSocket({
+        url: 'ws://127.0.0.1:8080/',
+        header: {
+          'content-type': 'application/json'
+        },
+        method: 'POST',
         success: function(res) {
-          console.log('socket连接成功：' + res)
+          console.log('socket连接成功：', res)
         },
         fail: function(res) {
-          console.log('socket连接失败：' + res)
+          console.log('socket连接失败：', res)
         },
         complete: function(res) {
-          console.log('socket连接完成：' + res)
+          console.log('socket连接完成：', res)
         },
       })
-    socket.onOpen(function (header) {
-      console.log('socket已打开：' + header)
+   
+    socketTask.onOpen((header) => {
+      console.log('socket已打开：' , header)
+      this.sendMsg()
+
     })
-    socket.onError(function (errMsg) {
-      console.log('socket出现错误：' + errMsg)
+    socketTask.onError((errMsg) => {
+      console.log('socket出现错误：', errMsg)
     })
-    socket.onClose(function (res) {
-      console.log('socket关闭：' + res)
+    socketTask.onClose((res) => {
+      console.log('socket关闭：', res)
     })
-    socket.onMessage(function (data) {
-      console.log('socket接收了消息：' + data)
+    socketTask.onMessage((res) => {
+      console.log('socket接收了消息：', res.data)
     })
       // wx.connectSocket({
       //   // url: 'ws://127.0.0.1:8080/',
@@ -92,7 +95,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    
+    socketTask.close()
   },
 
   /**
