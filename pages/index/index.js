@@ -17,7 +17,7 @@ Page({
   },
   bindSocketViewTap: function () {
     wx.navigateTo({
-      url: '../chat/chat',
+      url: '../websocket/websocket',
     })
   },
   onLoad: function () {

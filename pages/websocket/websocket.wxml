@@ -1,3 +1,9 @@
-<button bindtap='sendMsg'>
-发送消息
+<button data-msg='小程序发送消息' bindtap='sendMsg'>
+给服务器发送消息
 </button>
+<button data-msg='群发' bindtap='sendMsg'>
+服务器给所有在线终端发送消息
+</button>
+<!-- <button data-msg='10000' bindtap='sendMsgCyclic'>
+10000次：for循环发送消息
+</button> -->

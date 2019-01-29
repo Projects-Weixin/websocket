@@ -1,47 +1,3 @@
-<!-- <html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>WebSocket Echo Demo</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="../bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-	<script src="../js/jquery-1.12.3.min.js">
-	</script>
-	<script src="../js/jquery-1.12.3.min.js">
-	</script>
-	<script src="../bootstrap-3.3.5/js/bootstrap.min.js">
-	</script>
-	<script>
-		var ws = new WebSocket("ws://127.0.0.1:8080/");
-  ws.onopen = function (e) {
-    console.log('Connection to server opened');
-  }
-  function sendMessage() {
-    ws.send($('#message').val());
-  }
-	</script>
-</head>
-
-<body>
-	<div class="vertical-center">
-		<div class="container">
-			<p> </p>
-			<form role="form" id="chat_form" onsubmit="sendMessage(); return false;">
-				<div class="form-group">
-					<input class="form-control" type="text" name="message" id="message"
-              placeholder="Type text to echo in here" value="" />
-        </div>
-        <button type="button" id="send" class="btn btn-primary"
-            onclick="sendMessage();">
-          Send!
-        </button>
-      </form>
-    </div>
-  </div>
-</body>
-</html> -->
-
-
 
 <!DOCTYPE HTML>
 <html>
@@ -54,28 +10,29 @@
 </head>
 <body>
     <div id="connected"></div>
-
     <script type="text/javascript">
              function sendMessage() {
-                socket.send("socket send message success--------来自浏览器");
+                socket.send("浏览器发送消息");
               }
 
           var onOpen = function() {
                 console.log("Socket opened.");
-                socket.send("Hi, Server!");
+                // socket.send("Hi, Server!");
             },
             onClose = function() {
                 console.log("Socket closed.");
             },
             onMessage = function(data) {
                 console.log("We get signal:");
-                console.log(data);
+                console.log(data.data);
+				        alert(data.data);
             },
             onError = function() {
                 console.log("We got an error.");
             },
 
-        socket = new WebSocket("ws://127.0.0.1:8080/");
+		    socket = new WebSocket("ws://192.168.1.104:8080/");
+        // socket = new WebSocket("ws://127.0.0.1:8080/");
         socket.onopen = onOpen;
         socket.onclose = onClose;
         socket.onerror = onError;
