@@ -8,9 +8,7 @@
 
 执行：
 1、terminal进入server.js目录，运行：node server.js
-2、浏览器运行：client.html
----
-3、停止服务：control+c
+2、停止服务：control+c
 
 
 socket-im-demo

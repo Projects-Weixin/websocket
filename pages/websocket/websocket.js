@@ -40,25 +40,11 @@ Page({
    */
   onLoad: function (options) {
     socketTask = wx.connectSocket({
-      // url: 'ws://192.168.1.108:2011/',
-      // url: 'ws://192.168.1.110:8080/',
       url: 'ws://192.168.1.104:8080/',
-      // url: 'ws://127.0.0.1:8080/',
-        header: {
-          'content-type': 'application/json'
-        },
-        method: 'POST',
-        success: function(res) {
-          console.log('socket连接成功：', res)
-        },
-        fail: function(res) {
-          console.log('socket连接失败：', res)
-        },
-        complete: function(res) {
-          console.log('socket连接完成：', res)
-        },
-      })
-   
+      success: function (res) {
+        console.log('socket连接成功：', res)
+      },
+    })
     socketTask.onOpen((header) => {
       console.log('socket已打开：' , header)
     })
@@ -84,10 +70,6 @@ Page({
           }
         }
       })
-      // wx.showToast({
-      //   title: res.data,
-      //   duration:2000,
-      // })
     })
   },
 
