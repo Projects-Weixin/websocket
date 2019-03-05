@@ -1,0 +1,10 @@
+/* pages/news/news-detail.wxss */
+.containers{
+  display: flex;
+  flex-direction: column;
+}
+.-banner{
+  margin-bottom: 10rpx;
+  width: 100%;
+  height: 300rpx;
+}

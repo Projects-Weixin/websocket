@@ -1,20 +1,10 @@
 Page({
-  onHandleContact(e) {
-    console.log(e.path)
-    console.log(e.query)
-  },
-  onGetUserInfo: function (e) {
-    console.log(e);
-  },
-  onGetPhoneNumber: function (e) {
-    console.log(e);
-  },
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    lists: ['aaa','bbb'],
   },
 
   /**

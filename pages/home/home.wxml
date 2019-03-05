@@ -1,0 +1,22 @@
+<import src="./homeTemplate/homeTemplate.wxml" />
+
+<scroll-view>
+  <button wx:for="{{lists}}" wx:for-item="item" wx:for-index="index" wx:key="key">
+    {{item +'+'+ index}}
+  </button>
+  <block wx:for="{{lists}}" wx:for-item="item" wx:key="key">
+    <button>
+      {{item +'+'+ 10}}
+    </button>
+  </block>
+  <view>
+    <template is="homeTemplate" />
+    <icon type="success" size="40" color='red'/>
+  </view>
+  <view>
+    <navigator url='/pages/home/homeDetail/homeDetail?title=homeDetail' hover-class='navigator-hover'>
+      push chat page
+    </navigator>
+  </view>
+ 
+</scroll-view>

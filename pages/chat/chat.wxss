@@ -1,8 +1,80 @@
-page {
-  height: 100%;
+.right {
+  flex-direction: row-reverse;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
 }
 
-.container {
-  display: flex;
-  background-color:#b3d4db;
+.left {
+  flex-direction: row;
+  border-radius: 10rpx;
+  margin-left: 10rpx;
 }
+
+.itemcommon {
+  margin-top: 20rpx;
+  background-color: #8fcbf7;
+  max-width: 60%;
+  word-wrap: break-word;
+}
+/* 三角形 */
+.triangleAfter:after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+
+  /*border:8rpx solid transparent 等同于以下
+  border-width:8rpx;
+  border-style:solid;
+  border-color:transparent；*/
+  border: 8px solid transparent;
+
+  border-left: 8px solid #afabab;
+  position: relative;
+  top: 2px;
+  left: 10px;
+}
+/* 正方形 */
+.square{
+  width: 0;
+  height: 0;
+  border: 4px solid;
+}
+/* 投影 */
+.projecter{
+  width: 0;
+  height: 0;
+  border-top: 40px solid black;
+  border-right: 40px solid red;
+  border-left: 40px solid red;
+  border-bottom: 40px solid black;
+}
+/*三角形*/
+.triangle{
+  width: 0;
+  height: 0;
+  border-top: 40px solid black;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+.comment_bubble {
+    width: 140px;
+    height: 100px;
+    background: #088cb7;
+    position: relative;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+}
+  
+.comment_bubble:before {
+    content: "";
+    width: 0;
+    height: 0;
+    right: 100%;
+    top: 38px;
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-right: 26px solid #088cb7;
+    border-bottom: 13px solid transparent;
+}                          

@@ -40,7 +40,7 @@ Page({
    */
   onLoad: function (options) {
     socketTask = wx.connectSocket({
-      url: 'ws://192.168.1.104:8080/',
+      url: 'ws://192.168.1.109:8080/',
       success: function (res) {
         console.log('socket连接成功：', res)
       },

@@ -1,0 +1,4 @@
+<!--pages/news/news-detail.wxml-->
+<view class='containers'>
+  <image class='-banner' src='{{item.imgSrc}}'></image>
+</view>

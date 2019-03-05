@@ -1,0 +1,8 @@
+<!--pages/home/homeTemplate/homeTemplate.wxml-->
+<template name="homeTemplate">
+  <view>
+    <text>
+      sssssss
+    </text>
+  </view>
+</template>

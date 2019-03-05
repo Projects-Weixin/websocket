@@ -45,7 +45,7 @@ function message(msg) {
   //   });
   // } else {
   //   //单回消息
-  //   socket.send('服务器回复');
+    socket.send('服务器回复');
   // }
 }
 function error(err) {

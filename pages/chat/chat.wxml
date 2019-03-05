@@ -1,8 +1,22 @@
-
-    <view class='container'>
-        <view class='backgroud'>
-
-        </view>
-        
-    </view>
-  
+<view>
+  <view class='left itemcommon'>
+    吃了吗
+  </view>
+  <view class='right itemcommon'>
+    吃过了，吃了红烧排骨和酸菜鱼吃过了，吃了红烧排骨和酸菜鱼吃过了，吃了红烧排骨和酸菜鱼吃过了，吃了红烧排骨和酸菜鱼吃过了，吃了红烧排骨和酸菜鱼
+  </view>
+  <view class='triangleAfter'>三角形</view>
+  <view class='square'></view>
+  <view>-------</view>
+  <view class='projecter'></view>
+  <view>-------</view>
+  <view class='triangle'></view>
+  <view>-------</view>
+  <view class='comment_bubble'></view>
+  <button open-type="contact" bindcontact="onHandleContact">进入客服会话</button>
+  <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGetUserInfo">
+    获取用户信息
+  </button>
+  <button open-type="openSetting">打开授权设置页</button>
+  <button open-type="getPhoneNumber" bindgetphonenumber="onGetPhoneNumber">获取用户手机号回调</button>
+</view>
