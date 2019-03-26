@@ -1,0 +1,5 @@
+<!--pages/components/Toast/toast.wxml-->
+<view class='mask' hidden="{{isShow}}">
+ <image class="image" src='../../images/{{icon}}.png' mode='aspectFit'></image>
+ <view class='info'>{{information}}</view>
+</view>

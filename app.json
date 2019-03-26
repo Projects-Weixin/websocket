@@ -2,7 +2,6 @@
   "pages": [
     "pages/home/home",
     "pages/chat/chat",
-    "pages/conversation/conversation",
     "pages/my/my",
     "pages/home/homeDetail/homeDetail",
     "pages/news/news",

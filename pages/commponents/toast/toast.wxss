@@ -1,0 +1,35 @@
+/* pages/commponents/toast/toast.wxss */
+.mask{
+ width: 400rpx;
+ height: 300rpx;
+ border-radius:10rpx; 
+ position: fixed;
+ z-index: 1000;
+ top: 300rpx;
+ left: 175rpx;
+ background: rgba(0, 0, 0, 0.6);
+}
+.image{
+ z-index: 1000;
+ width: 120rpx;
+ height: 120rpx;
+ margin-left: 140rpx;
+}
+.info{
+ margin-top:50rpx; 
+ z-index: 1000;
+ text-align: center;
+ color: #ffffff;
+}
+.image{
+ z-index: 1000;
+ width: 120rpx;
+ height: 120rpx;
+ margin-left:80rpx;
+}
+.info{
+ margin-top:50rpx; 
+ z-index: 1000;
+ text-align: center;
+ color: #ffffff;
+}

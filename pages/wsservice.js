@@ -9,7 +9,7 @@ var webSocket = {
   /*
   连接
   */
-  connectSocket: function(handler) {
+  connectSocket: function() {
     socketTask = wx.connectSocket({
       url: socketURL,
       success: function(res) {
@@ -28,6 +28,14 @@ var webSocket = {
       console.log('socket已打开：', res)
       that.startHeartBeat()
     })
+
+    /**
+     * 收到消息
+     */
+    // socketTask.onMessage(function(res) {
+    //   console.log('接收消息', res)
+    // })
+
     socketTask.onError(function(res) {
       console.log('socket出现错误：', res)
     })
@@ -58,22 +66,12 @@ var webSocket = {
   },
 
   /*
-  接收消息
-  */
-  socketMessage: function(res) {
-    socketTask.onMessage(function(res) {
-      console.log('接收消息', res)
-    })
-  },
-
-  /*
   开启心跳包，小程序timer是延迟执行，所以这里使用了递归
   */
   startHeartBeat: function() {
-    this.sendSocketMessage('heart')
     var that = this
-    timerTask = setTimeout(function() {
-      that.startHeartBeat()
+    timerTask = setInterval(function() {
+      that.sendSocketMessage('heart')
     }, 5000);
 
   },
@@ -83,10 +81,22 @@ var webSocket = {
   */
   stopHeartBeat: function() {
     if (timerTask) {
-      clearTimeout(timerTask)
-      timerTask = nil
+      clearInterval(timerTask)
+      timerTask = null
     }
   }
 }
+/**
+ * 获取新消息
+ */
+function onSocketMessage(handler) {
+  socketTask.onMessage(function(res) {
+    console.log('接收消息', res)
+    handler && handler(JSON.stringify(res))
+  })
+}
 
-module.exports = webSocket;
+module.exports = {
+  webSocket: webSocket,
+  onSocketMessage: onSocketMessage
+}

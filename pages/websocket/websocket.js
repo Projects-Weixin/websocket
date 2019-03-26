@@ -1,6 +1,6 @@
 // let socketTask
 // var sendMsgType
-const ws = require('../WebSocketService.js');
+const ws = require('../wsservice.js');
 
 Page({
 
@@ -28,58 +28,23 @@ Page({
       this.socketSend(i)
     }
   },
-  sendCloseSocket: function() {
-    ws.closeSocket()
+  closeSocket: function() {
+    ws.webSocket.closeSocket()
   },
   // socket
   socketSend: function(msg) {
-    ws.sendSocketMessage(msg)
-
-    // socketTask.send({
-    //   data: msg
-    // })
+    ws.webSocket.sendSocketMessage(msg)
   },
 
+ 
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    ws.connectSocket()
-  
-
-    // socketTask = wx.connectSocket({
-    //   url: 'ws://192.168.1.109:8080/',
-    //   success: function (res) {
-    //     console.log('socket连接成功：', res)
-    //   },
-    // })
-    // socketTask.onOpen((header) => {
-    //   console.log('socket已打开：', header)
-    // })
-    // socketTask.onError((errMsg) => {
-    //   console.log('socket出现错误：', errMsg)
-    // })
-    // socketTask.onClose((res) => {
-    //   console.log('socket关闭：', res)
-    // })
-    // socketTask.onMessage((res) => {
-    //   console.log('小程序接收了消息：', res.data)
-    //   if (sendMsgType == 'sendMsgCyclic') {
-    //     return
-    //   }
-    //   wx.showModal({
-    //     title: '提示',
-    //     content: res.data,
-    //     success: function (res) {
-    //       if (res.confirm) {
-    //         console.log('用户点击确定')
-    //       } else {
-    //         console.log('用户点击取消')
-    //       }
-    //     }
-    //   })
-    // })
+    ws.onSocketMessage(function (res) {
+      console.log('socket页面：' + res)
+    })
   },
 
   /**

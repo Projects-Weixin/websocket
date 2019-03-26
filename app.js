@@ -1,16 +1,17 @@
-const url = require('pages/URLService.js');
+const url = require('pages/urlservice.js');
+const ws = require('pages/wsservice.js');
 
 //app.js
 App({
   onLaunch: function () {
+    ws.webSocket.connectSocket()
+
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    wx.request({
-      url: url.login,
-    })
 
     // 登录
     wx.login({
