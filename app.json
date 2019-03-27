@@ -6,7 +6,8 @@
     "pages/home/homeDetail/homeDetail",
     "pages/news/news",
     "pages/news/news-detail",
-    "pages/websocket/websocket"
+    "pages/websocket/websocket",
+    "pages/form/form"
   ],
   "window": {
     "backgroundTextStyle": "light",

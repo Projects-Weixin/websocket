@@ -1,4 +1,4 @@
-// pages/dialogup.js
+// pages/commponents/dialogup/dialogup.js
 Component({
   /**
    * 组件的属性列表
@@ -11,22 +11,22 @@ Component({
    * 组件的初始数据
    */
   data: {
-    isShow: true,
+    isShowView:false
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    showToast: function () {
+    showDialogup: function() {
       this.setData({
-        isShow: !this.data.isShow
+        isShowView:true
       })
     },
-    hideToast: function (e) {
+    hideDialogup: function() {
       this.setData({
-        isShow: !this.data.isShow
-      });
+        isShowView:false
+      })
     }
   }
 })

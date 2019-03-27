@@ -1,7 +1,7 @@
- <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
-    <view class="zan-dialog__mask" bindtap="toggleDialog" />
-    <view class="zan-dialog__container">
-      <view style='padding:100rpx;'>此处是填充的布局代码</view>
-      <button class='zan-dialog-btn' bindtap='toggleHideDialog'>确定</button>
-    </view>
+<view class="{{ isShowView ? 'dl-show' : '' }}">
+  <view class="dl-mask" bindtap="hideDialogup" />
+  <view class="dl-container">
+    <view class='dl-title'>此处是填充的布局代码</view>
+    <button class='dl-btn' plain='true' bindtap='hideDialogup'>确定</button>
   </view>
+</view>

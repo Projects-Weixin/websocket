@@ -25,7 +25,7 @@ Component({
   * 组件的初始数据
   */
   data: {
-    isShow: true
+    isHidden: true
   },
   /**
   * 组件的方法列表
@@ -33,14 +33,14 @@ Component({
   methods: {
     showToast: function () {
       this.setData({
-        isShow: !this.data.isShow
+        isHidden: false
       });
     },
     hideToast: function (e) {
       let that = this;
       setTimeout(function () {
         that.setData({
-          isShow: !that.data.isShow
+          isHidden: true
         });
       }, that.data.hideTime);
     }

@@ -1,4 +1,5 @@
 <import src="./homeTemplate/homeTemplate.wxml" />
+<import scr='../form/form' />
 
 <scroll-view>
   <button wx:for="{{lists}}" wx:for-item="item" wx:for-index="index" wx:key="key">
@@ -9,30 +10,46 @@
       {{item +'+'+ 10}}
     </button>
   </block>
+
   <view>
     <template is="homeTemplate" />
     <icon type="success" size="40" color='red' />
   </view>
-  <view>
+
+  <view class='inputstyle'>
+    <navigator url='/pages/form/form'>
+      form
+    </navigator>
+  </view>
+
+  <view class='btnstyle'>
     <navigator url='/pages/home/homeDetail/homeDetail?title=homeDetail' hover-class='navigator-hover'>
       跳转到下一页
     </navigator>
   </view>
-  <view bindtap='toggleDialog'>
+
+  <view class='btnstyle' bindtap='toggleDialogup'>
     点击出现弹窗
   </view>
-  <view bindtap='toggleToast'>
+  <view class='btnstyle' bindtap='toggleToast'>
     点击出现提示框
   </view>
+  <button type='primary' bindtap='showModal'>showModal</button>
+  <button type='warn' bindtap='showActionSheet'>showActionSheet</button>
+  <button plain='true' bindtap='showLoading' loading='{{isloading}}'>showLoading</button>
+  <view>{{inputText}}</view>
+  <input class='inputstyle' bindinput='inputTextChange' value='输入账号'></input>
+  <input class='inputstyle' placeholder='输入密码' password='true' maxlength='10'></input>
+
+  <view>
+    <picker mode='date' value='{{pickterDate}}' bindchange='pickterDateChange'>
+      <view>{{pickterDate}}</view>
+    </picker>
+  </view>
+
+
+  <!-- commponents-->
+  <dialogup id='dialogup'></dialogup>
   <toast id='toast' information="提交成功，我们会尽快和您联系" icon="success" showTime="1000" hideTime='2000'></toast>
-
-
-  <!-- <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
-    <view class="zan-dialog__mask" bindtap="toggleDialog" />
-    <view class="zan-dialog__container">
-      <view style='padding:100rpx;'>此处是填充的布局代码</view>
-      <button class='zan-dialog-btn' bindtap='toggleHideDialog'>确定</button>
-    </view>
-  </view> -->
 
 </scroll-view>

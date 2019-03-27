@@ -1,22 +1,72 @@
 const ws = require('../wsservice.js');
 
 Page({
-  toggleDialog: function() {
-    this.setData({
-      showDialog: true
+  showModal: function() {
+    wx.showModal({
+      title: '1111',
+      content: '222',
     })
+  },
+  showActionSheet: function() {
+    wx.showActionSheet({
+      itemList: ['1', '2', '3'],
+    })
+  },
+  showLoading: function() {
+    var self = this
+
+    //btn loading
+    this.setData({
+      isloading: true
+    })
+    //导航条loading
+    wx.showNavigationBarLoading()
+    //弹窗loading
+    wx.showLoading({
+      title: '11',
+      mask: true,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+    setTimeout(function() {
+      self.setData({
+        isloading: false
+      })
+      wx.hideNavigationBarLoading()
+      wx.hideLoading()
+      wx.showToast({
+        title: 'loading complete',
+      })
+    }, 2000)
+  },
+
+  toggleDialogup: function() {
+    this.selectComponent("#dialogup").showDialogup()
   },
   toggleToast: function() {
     this.toast.showToast(); 
     this.toast.hideToast();
   },
 
+  inputTextChange: function(e) {
+    this.setData({
+      inputText:e.detail.value
+    })
+  },
+  pickterDateChange: function(e) {
+    this.setData({
+      pickterDate: e.detail.value
+    })
+  },
   /**
    * 页面的初始数据
    */
   data: {
     lists: ['aaa', 'bbb'],
-    showDialog: false,
+    isloading: false,
+    pickterDate: '2016-09-01',
+    inputText: '默认输入框内容'
   },
 
   /**
@@ -28,7 +78,6 @@ Page({
     })
 
     this.toast = this.selectComponent("#toast");
-
   },
 
   /**
@@ -77,6 +126,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-
+    return {
+      title: 'home',
+      path: 'pages/home/home'
+    }
   }
 })

@@ -2,3 +2,18 @@ page {
   height: 100%;
 }
 
+.btnstyle{
+  height: 100rpx;
+  width: 90%;
+  text-align: center;
+}
+
+.inputstyle .border{
+  height: 50rpx;
+  padding: 10rpx;
+}
+
+.border {
+  border-width: 10rpx;
+  border-color: black;
+}

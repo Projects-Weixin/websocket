@@ -1,41 +1,43 @@
-/* pages/dialogup.wxss */
+/* pages/commponents/dialogup/dialogup.wxss */
 
-.zan-dialog__mask {
+.dl-mask {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 10;
-  background: rgba(0, 0, 0, 0);/*设置阴影半透明背景如： background: rgba(0, 0, 0, 0.4);*/
+  background: rgba(0, 0, 0, 0.5);/*设置阴影半透明背景如： background: rgba(0, 0, 0, 0.4);*/
   display: none;
 }
 
-.zan-dialog__container {
+.dl-container {
   position: fixed;
   bottom: 30%;
   width: 70%;/*弹窗布局宽*/
   height: 40%;/*弹窗布局高，与下面弹出距离transform有关*/
   left: 15%;
-  background: #f8f8f8;
+  background:white;
   transform: translateY(300%);/*弹框弹出距离，与弹框布局高度有关，如300%表示弹起距离为3倍弹窗高度*/
   transition: all 0.4s ease;
-  z-index: 12;
   border-radius: 20rpx;
-  box-shadow: 0px 3px 3px 2px gainsboro;/*弹框的悬浮阴影效果，如不需要可注释该行*/
 }
 
-.zan-dialog--show .zan-dialog__container {
+.dl-show .dl-container {
   transform: translateY(0);
 }
 
-.zan-dialog--show .zan-dialog__mask {
+.dl-show .dl-mask {
   display: block;
 }
 
-.zan-dialog-btn {
+.dl-title{
+  top: 20rpx;
+  text-align: center;
+}
+
+.dl-btn {
   margin-bottom: 20rpx;
   width: 60%;
-  border-width: 1rpx;
-  border-color: black;
+  /* border-width: 1rpx;
+  border-color: black; */
 }
