@@ -1,5 +1,6 @@
 <import src="./homeTemplate/homeTemplate.wxml" />
 <import scr='../form/form' />
+<import scr='../video/video'/>
 
 <scroll-view>
   <button wx:for="{{lists}}" wx:for-item="item" wx:for-index="index" wx:key="key">
@@ -22,7 +23,13 @@
     </navigator>
   </view>
 
+  <view class='btnstyle'>
+    <navigator url='/pages/video/video'>
+      视频
+    </navigator>
+  </view>
   <button bindtap='openFile'>打开文件</button>
+
   <view class='btnstyle'>
     <navigator url='/pages/home/homeDetail/homeDetail?title=homeDetail' hover-class='navigator-hover'>
       跳转到下一页

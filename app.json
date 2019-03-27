@@ -7,7 +7,8 @@
     "pages/news/news",
     "pages/news/news-detail",
     "pages/websocket/websocket",
-    "pages/form/form"
+    "pages/form/form",
+    "pages/video/video"
   ],
   "window": {
     "backgroundTextStyle": "light",

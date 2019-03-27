@@ -1,7 +1,12 @@
 const ws = require('../wsservice.js');
 
 Page({
-  openFile:function(){
+  playVideo: function() {
+    wx.playVideo({
+      url:'http:127.0.0.1/login.mp4'
+    })
+  },
+  openFile: function() {
     wx.downloadFile({
       // 示例 url，并非真实存在
       url: 'http://192.168.1.110:808/a.pdf',
@@ -66,7 +71,7 @@ Page({
 
   inputTextChange: function(e) {
     this.setData({
-      inputText:e.detail.value
+      inputText: e.detail.value
     })
   },
   pickterDateChange: function(e) {
