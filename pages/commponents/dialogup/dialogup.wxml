@@ -2,6 +2,7 @@
   <view class="dl-mask" bindtap="hideDialogup" />
   <view class="dl-container">
     <view class='dl-title'>此处是填充的布局代码</view>
+    <icon type='success_no_circle' color='green' size="60" />
     <button class='dl-btn' plain='true' bindtap='hideDialogup'>确定</button>
   </view>
 </view>

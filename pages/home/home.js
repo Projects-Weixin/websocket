@@ -1,6 +1,21 @@
 const ws = require('../wsservice.js');
 
 Page({
+  openFile:function(){
+    wx.downloadFile({
+      // 示例 url，并非真实存在
+      url: 'http://192.168.1.110:808/a.pdf',
+      success(res) {
+        const filePath = res.tempFilePath
+        wx.openDocument({
+          filePath,
+          success(res) {
+            console.log('打开文档成功')
+          }
+        })
+      }
+    })
+  },
   showModal: function() {
     wx.showModal({
       title: '1111',

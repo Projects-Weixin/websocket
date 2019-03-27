@@ -22,6 +22,7 @@
     </navigator>
   </view>
 
+  <button bindtap='openFile'>打开文件</button>
   <view class='btnstyle'>
     <navigator url='/pages/home/homeDetail/homeDetail?title=homeDetail' hover-class='navigator-hover'>
       跳转到下一页
