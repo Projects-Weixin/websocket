@@ -1,4 +1,11 @@
 <!--pages/my/my.wxml-->
-<!-- <text>pages/my/my.wxml</text> -->
-<web-view src="https://163.com/"></web-view>
+<!-- <web-view src="https://163.com/"></web-view> -->
+<!-- <web-view src='http://127.0.0.1/pdf.pdf'></web-view> -->
+<!-- <web-view src='http://192.168.1.110:808/a.pdf'></web-view> -->
+  
+<view>
+  <button class='mybtn'>反馈</button>
+  <web-view class='webview' src='http://127.0.0.1/pdf.pdf'>
 
+  </web-view>
+</view>

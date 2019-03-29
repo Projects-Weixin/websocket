@@ -1,6 +1,7 @@
 <import src="./homeTemplate/homeTemplate.wxml" />
 <import scr='../form/form' />
 <import scr='../video/video'/>
+<import scr='../my/my'/>
 
 <scroll-view>
   <button wx:for="{{lists}}" wx:for-item="item" wx:for-index="index" wx:key="key">
@@ -15,6 +16,12 @@
   <view>
     <template is="homeTemplate" />
     <icon type="success" size="40" color='red' />
+  </view>
+
+ <view class='inputstyle'>
+    <navigator url='/pages/my/my'>
+      webview
+    </navigator>
   </view>
 
   <view class='inputstyle'>
@@ -32,7 +39,7 @@
 
   <view class='btnstyle'>
     <navigator url='/pages/home/homeDetail/homeDetail?title=homeDetail' hover-class='navigator-hover'>
-      跳转到下一页
+      跳转下一页，打开webview
     </navigator>
   </view>
 
