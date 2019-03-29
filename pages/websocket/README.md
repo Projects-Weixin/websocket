@@ -10,7 +10,11 @@ node.js
 2、停止服务：control+c
 
 MacOS 本地服务（使用Mac自带Apache服务器）
-1、sudo apachectl start
+1、
+sudo apachectl start
+sudo apachectl stop
+sudo apachectl restart
+
 2、访问：127.0.0.1
 3、cd /Library/WebServer/Documents，放入对应文件
 
