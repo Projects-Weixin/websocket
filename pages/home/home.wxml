@@ -36,6 +36,7 @@
     </navigator>
   </view>
   <button bindtap='openFile'>打开文件</button>
+  <button bindtap='uploadFile'>上传图片</button>
 
   <view class='btnstyle'>
     <navigator url='/pages/home/homeDetail/homeDetail?title=homeDetail' hover-class='navigator-hover'>

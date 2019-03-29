@@ -7,6 +7,29 @@ Page({
       url:'http:127.0.0.1/login.mp4'
     })
   },
+  uploadFile:function(){
+    wx.chooseVideo({
+      success(res) {
+        const tempFilePaths = res.tempFilePaths
+        wx.uploadFile({
+          url: 'http://192.168.1.110/WebApplication1/upload.ashx', // 仅为示例，非真实的接口地址
+          filePath: tempFilePaths,
+          name: 'file',
+          formData: {
+            user: 'test'
+          },
+          success(res) {
+            const data = res.data
+            console.log('成功')
+            // do something
+          },
+          fail(res){
+            console.log('失败'+res)
+          }
+        })
+      }
+    })
+  },
   openFile: function() {
     wx.downloadFile({
       url: 'http://192.168.1.110:808/a.ppt',
