@@ -1,0 +1,53 @@
+/* pages/navtab/navtab.wxss */
+
+
+
+.navbar_container {
+  display: flex;
+  top: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: justify-content;
+  top: 0;
+  width: 75%;
+}
+
+.navbar_item_view {
+  display: flex;
+}
+
+.navbar_item {
+  flex: 1;
+  padding: 13rpx;
+  text-align: center;
+}
+
+.navbar_item.navbar_item_on {
+  color: #1aad19;
+}
+
+.navbar_slider {
+  content: " ";
+  left: 0;
+  bottom: 0;
+  width: 3em;
+  height: 3rpx;
+  background-color: #1aad19;
+  transition: transform 0.3s;
+}
+
+.navbar_title {
+  white-space: nowrap;
+}
+
+.navbar_barrage {
+  font-size: 25rpx;
+}
+
+.tab_panel {
+  height: 100%;
+  padding-top: 10rpx;
+  overflow: auto;
+}

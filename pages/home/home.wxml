@@ -1,7 +1,7 @@
 <import src="./homeTemplate/homeTemplate.wxml" />
 <import scr='../form/form' />
-<import scr='../video/video'/>
-<import scr='../my/my'/>
+<import scr='../video/video' />
+<import scr='../my/my' />
 
 <scroll-view>
   <button wx:for="{{lists}}" wx:for-item="item" wx:for-index="index" wx:key="key">
@@ -18,7 +18,13 @@
     <icon type="success" size="40" color='red' />
   </view>
 
- <view class='inputstyle'>
+  <view class='inputstyle'>
+    <navigator url='/pages/navtab/navtab'>
+      navtab
+    </navigator>
+  </view>
+
+  <view class='inputstyle'>
     <navigator url='/pages/my/my'>
       webview
     </navigator>

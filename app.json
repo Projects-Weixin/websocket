@@ -11,7 +11,8 @@
     "pages/video/video",
     "pages/livepusher",
     "pages/livepusher/livepusher",
-    "pages/liveplayer/liveplayer"
+    "pages/liveplayer/liveplayer",
+    "pages/navtab/navtab"
   ],
   "window": {
     "backgroundTextStyle": "light",

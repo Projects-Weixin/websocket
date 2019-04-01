@@ -32,7 +32,7 @@ Page({
   },
   openFile: function() {
     wx.downloadFile({
-      url: 'http://192.168.1.110:808/a.ppt',
+      url: 'http://127.0.0.1/pdf.pdf',
       success(res) {
         const filePath = res.tempFilePath
         wx.openDocument({

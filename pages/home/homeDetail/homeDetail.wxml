@@ -1,6 +1,10 @@
 <!--pages/home/homeDetail/homeDetail.wxml-->
 <!-- <text>pages/home/homeDetail/homeDetail.wxml</text> -->
+
 <view>
-  <web-view class='webview' src='http://127.0.0.1/pdf.pdf'></web-view>
+  <!-- <web-view class='webview' src='http://127.0.0.1/pdf.pdf'>
+  </web-view> -->
+  <web-view class='webview' src='/pages/index-mp4.html'>
+  </web-view>
   <button>反馈</button>
 </view>

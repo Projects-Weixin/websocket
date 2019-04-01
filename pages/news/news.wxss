@@ -50,7 +50,7 @@
   vertical-align:middle;
 }
 .-tools-text{
-  font-size: 13px;
+  font-size: 13rpx;
   margin-right: 20rpx;
   vertical-align:middle;
 }
