@@ -1,0 +1,11 @@
+<!--pages/barrage/barrage.wxml-->
+<view class='viewpage'>
+    <view>
+      <textarea class='textarea' placeholder='sdfsdflj'></textarea>
+      <view>0/100</view>
+    </view>
+
+    <text class='btn'>温馨提示</text>
+
+    <button class='btn1'>确认按钮</button>
+</view>

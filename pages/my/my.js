@@ -28,6 +28,16 @@ Page({
         num: 10,
         progress: 100
       },
+      {
+        option: 'E',
+        num: 70,
+        progress: 100
+      },
+      {
+        option: 'F',
+        num: 100,
+        progress: 100
+      },
     ],
     options: [{
         option: 'A'

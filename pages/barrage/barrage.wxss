@@ -1,0 +1,24 @@
+/* pages/barrage/barrage.wxss */
+
+.viewpage {
+  width: 100%;
+  height: 100%;
+}
+
+.textarea {
+  width: 80%;
+  height:200px;
+  margin: 0 auto;
+  /* padding: 20px 20px 20px 20px;  */
+  border: 1px solid gray;
+}
+
+.btn {
+  padding-left: 20px;
+  margin-top: 20px;
+  display: block
+}
+.btn1 {
+  margin-left: 20px;
+  margin-top: 20px;
+}

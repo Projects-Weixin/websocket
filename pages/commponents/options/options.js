@@ -23,6 +23,12 @@ Component({
       {
         option: 'D'
       },
+      {
+        option: 'E'
+      },
+      {
+        option: 'F'
+      },
     ]
 
   },
@@ -38,6 +44,7 @@ Component({
       this.setData({
         options: e
       })
+      console.log(this.data.options)
     }
   }
 })
