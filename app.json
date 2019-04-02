@@ -9,7 +9,6 @@
     "pages/websocket/websocket",
     "pages/form/form",
     "pages/video/video",
-    "pages/livepusher",
     "pages/livepusher/livepusher",
     "pages/liveplayer/liveplayer",
     "pages/navtab/navtab"

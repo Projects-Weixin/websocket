@@ -4,74 +4,76 @@
 <import scr='../my/my' />
 
 <scroll-view>
-  <button wx:for="{{lists}}" wx:for-item="item" wx:for-index="index" wx:key="key">
-    {{item +'+'+ index}}
-  </button>
-  <block wx:for="{{lists}}" wx:for-item="item" wx:key="key">
-    <button>
-      {{item +'+'+ 10}}
+    <button wx:for="{{lists}}" wx:for-item="item" wx:for-index="index" wx:key="key">
+      {{item +'+'+ index}}
     </button>
-  </block>
+    <block wx:for="{{lists}}" wx:for-item="item" wx:key="key">
+        <button>
+          {{item +'+'+ 10}}
+        </button>
+    </block>
 
-  <view>
-    <template is="homeTemplate" />
-    <icon type="success" size="40" color='red' />
-  </view>
+    <view>
+        <template is="homeTemplate" />
+        <icon type="success" size="40" color='red' />
+        <text class='border'>ssssss\t阿萨\n德龙卷_______()（）风nnnnnn盛开的花\nsssssjjjjj\nsldjflsjdf
+        </text>
+    </view>
 
-  <view class='inputstyle'>
-    <navigator url='/pages/navtab/navtab'>
-      navtab
-    </navigator>
-  </view>
+    <view class='inputstyle'>
+        <navigator url='/pages/navtab/navtab'>
+          navtab
+        </navigator>
+    </view>
 
-  <view class='inputstyle'>
-    <navigator url='/pages/my/my'>
-      webview
-    </navigator>
-  </view>
+    <view class='inputstyle'>
+        <navigator url='/pages/my/my'>
+          webview
+        </navigator>
+    </view>
 
-  <view class='inputstyle'>
-    <navigator url='/pages/form/form'>
-      form
-    </navigator>
-  </view>
+    <view class='inputstyle'>
+        <navigator url='/pages/form/form'>
+          form
+        </navigator>
+    </view>
 
-  <view class='btnstyle'>
-    <navigator url='/pages/video/video'>
-      视频
-    </navigator>
-  </view>
-  <button bindtap='openFile'>打开文件</button>
-  <button bindtap='uploadFile'>上传图片</button>
+    <view class='btnstyle'>
+        <navigator url='/pages/video/video'>
+          视频
+        </navigator>
+    </view>
+    <button bindtap='openFile'>打开文件</button>
+    <button bindtap='uploadFile'>上传图片</button>
 
-  <view class='btnstyle'>
-    <navigator url='/pages/home/homeDetail/homeDetail?title=homeDetail' hover-class='navigator-hover'>
-      跳转下一页，打开webview
-    </navigator>
-  </view>
+    <view class='btnstyle'>
+        <navigator url='/pages/home/homeDetail/homeDetail?title=homeDetail' hover-class='navigator-hover'>
+          跳转下一页，打开webview
+        </navigator>
+    </view>
 
-  <view class='btnstyle' bindtap='toggleDialogup'>
-    点击出现弹窗
-  </view>
-  <view class='btnstyle' bindtap='toggleToast'>
-    点击出现提示框
-  </view>
-  <button type='primary' bindtap='showModal'>showModal</button>
-  <button type='warn' bindtap='showActionSheet'>showActionSheet</button>
-  <button plain='true' bindtap='showLoading' loading='{{isloading}}'>showLoading</button>
-  <view>{{inputText}}</view>
-  <input class='inputstyle' bindinput='inputTextChange' value='输入账号'></input>
-  <input class='inputstyle' placeholder='输入密码' password='true' maxlength='10'></input>
+    <view class='btnstyle' bindtap='toggleDialogup'>
+      点击出现弹窗
+    </view>
+    <view class='btnstyle' bindtap='toggleToast'>
+      点击出现提示框
+    </view>
+    <button type='primary' bindtap='showModal'>showModal</button>
+    <button type='warn' bindtap='showActionSheet'>showActionSheet</button>
+    <button plain='true' bindtap='showLoading' loading='{{isloading}}'>showLoading</button>
+    <view>{{inputText}}</view>
+    <input class='inputstyle' bindinput='inputTextChange' value='输入账号'></input>
+    <input class='inputstyle' placeholder='输入密码' password='true' maxlength='10'></input>
 
-  <view>
-    <picker mode='date' value='{{pickterDate}}' bindchange='pickterDateChange'>
-      <view>{{pickterDate}}</view>
-    </picker>
-  </view>
+    <view>
+      <picker mode='date' value='{{pickterDate}}' bindchange='pickterDateChange'>
+        <view>{{pickterDate}}</view>
+      </picker>
+    </view>
 
 
-  <!-- commponents-->
-  <dialogup id='dialogup'></dialogup>
-  <toast id='toast' information="提交成功，我们会尽快和您联系" icon="success" showTime="1000" hideTime='2000'></toast>
+    <!-- commponents-->
+    <dialogup id='dialogup'></dialogup>
+    <toast id='toast' information="提交成功，我们会尽快和您联系" icon="success" showTime="1000" hideTime='2000'></toast>
 
 </scroll-view>

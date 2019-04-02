@@ -1,4 +1,4 @@
-var socketURL = 'ws://192.168.21.5:8082'
+var socketURL = 'ws://192.168.21.5:8082/ws?userid=1111'
 //socket任务
 var socketTask
 //定时器任务

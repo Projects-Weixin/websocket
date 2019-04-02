@@ -1,0 +1,12 @@
+<!--components/votes/votes.wxml-->
+<view class='page'>
+  <!-- <block wx:for='{{votes}}' wx:for-item='item' wx:key='key'> -->
+  <block wx:for="{{votes}}" wx:for-item="item" wx:key="key">
+    <view class='voteView'>
+      <text class='text'>{{item.option}}</text>
+      <view class='progress' style='width:{{item.progress}}px;'></view>
+      <text class='text'>{{item.num}}</text>
+    </view>
+  
+  </block>
+</view>
