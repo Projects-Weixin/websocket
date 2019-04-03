@@ -12,7 +12,8 @@
     "pages/livepusher/livepusher",
     "pages/liveplayer/liveplayer",
     "pages/navtab/navtab",
-    "pages/barrage/barrage"
+    "pages/barrage/barrage",
+    "pages/flexbox/flexbox"
   ],
   "window": {
     "backgroundTextStyle": "light",

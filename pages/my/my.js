@@ -51,6 +51,12 @@ Page({
       {
         option: 'D'
       },
+      {
+        option: 'E'
+      },
+      // {
+      //   option: 'F'
+      // },
     ]
   },
 
@@ -59,7 +65,9 @@ Page({
    */
   onLoad: function(options) {
     this.selectComponent('#votes').updateProgress(this.data.votes)
-    this.selectComponent('#options').updateOption(this.data.options)
+    this.selectComponent('#options').updateOption(this.data.options,function(callback){
+      console.log(callback)
+    })
   },
 
   /**

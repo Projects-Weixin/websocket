@@ -1,18 +1,19 @@
 /* pages/commponents/options/options.wxss */
 
 .page {
-  width: 90%;
+  background-color: red;
   /* margin: 0 auto; */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
+  padding: 10px;
 }
 
 .options {
   margin: 10px;
-  border-radius: 20px;
-  width: 40px;
-  height: 40px;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
   border: 1px solid gray;
   display: flex;
   justify-content: center;

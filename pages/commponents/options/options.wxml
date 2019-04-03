@@ -1,6 +1,8 @@
 <!--pages/commponents/options/options.wxml-->
 <view class='page'>
   <block wx:for='{{options}}' wx:for-item='item' wx:key='key'>
-      <view class='options' bindtap='optionClick'>{{item.option}}</view>  
+      <button class='options' size='60' data-item='{{item}}' bindtap='optionClick'>
+        {{item.option}}
+      </button>  
   </block>
 </view>

@@ -13,6 +13,12 @@
         </button>
     </block>
 
+    <view inputstyle>
+      <navigator url='/pages/flexbox/flexbox'>
+        flexbox
+      </navigator>
+    </view>
+
     <view>
         <template is="homeTemplate" />
         <icon type="success" size="40" color='red' />

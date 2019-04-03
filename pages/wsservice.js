@@ -1,4 +1,4 @@
-var socketURL = 'ws://192.168.21.5:8082/ws?userid=1111'
+var socketURL = 'ws://192.168.21.5:8082/ws?userId=11999999&classId=222999999'
 //socket任务
 var socketTask
 //定时器任务
@@ -26,7 +26,7 @@ var webSocket = {
     */
     socketTask.onOpen(function(res) {
       console.log('socket已打开：', res)
-      that.startHeartBeat()
+      // that.startHeartBeat()
     })
 
     /**
