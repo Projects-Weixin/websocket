@@ -4,10 +4,27 @@ const ws = require('pages/wsservice.js');
 //app.js
 App({
   onLaunch: function () {
+    // socket 连接
     ws.webSocket.connectSocket()
 
-    var page = getCurrentPages()
-    console.log(page)
+    // socket 接收消息
+    ws.onSocketMessage(function (handler) {
+
+    })
+
+    // setTimeout(function(){
+    //   let pages = JSON.stringify(getCurrentPages())
+    //   console.log('app = pages' + getCurrentPages()[0], pages, pages.length)
+
+      
+    // },4000)
+
+    var pages = getCurrentPages()
+    console.log('pages'+pages)
+
+    for (var page in pages) {
+      console.log('page'+page)
+    }
 
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []

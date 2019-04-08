@@ -1,11 +1,34 @@
 // pages/home/homeDetail/homeDetail.js
 Page({
 
+  showAnswerSheet: function () {
+    this.selectComponent('#answersheet').showAnswerSheet('', function (callback){
+      console.log('homedetail'+callback)
+    })
+  },
   /**
    * 页面的初始数据
    */
   data: {
-
+    options: [{
+      option: 'A'
+    },
+    {
+      option: 'B'
+    },
+    {
+      option: 'C'
+    },
+    {
+      option: 'D'
+    },
+    {
+      option: 'E'
+    },
+      // {
+      //   option: 'F'
+      // },
+    ]
   },
 
   /**

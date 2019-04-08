@@ -1,23 +1,51 @@
 /* components/voteResults/voteResults.wxss */
 
 .page {
-  margin: 10px;
+  width: 100%;
 }
 
 .voteView {
+  display: justify-content;
+  padding-top: 24px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.textView {
+  padding: 0px 8px 8px 8px; /*上 右 下 左*/
   display: flex;
-  padding-top: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+  height: 16px;
+  justify-content: space-between;
+}
+
+.progressView {
+  background-color: #eee;
+  border-radius: 12px;
+  height: 16px;
 }
 
 .progress {
-  margin-left: 10px;
-  margin-right: 10px;
-  background-color: gray;
-  height: 10;
+  background-color: #999;
+  height: 16px;
+  width: 200px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.titleText {
+  margin-left: 25px;
+  height: 14px;
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  line-height: 14px;
 }
 
 .text {
-  font-size: 15px;
+  font-size: 16px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  line-height: 16px;
 }

@@ -2,6 +2,7 @@
   "navigationBarTitleText": "我的",
   "usingComponents": {
       "votes": "../commponents/votes/votes",
-      "options": "../commponents/options/options"
+      "options": "../commponents/options/options",
+      "answersheet":"../commponents/answersheet/answersheet"
   }
 }

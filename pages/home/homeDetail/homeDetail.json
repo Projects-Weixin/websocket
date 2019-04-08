@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+      "answersheet": "../../commponents/answersheet/answersheet"
+  },
   "navigationBarTitleText": "title内容"
 }

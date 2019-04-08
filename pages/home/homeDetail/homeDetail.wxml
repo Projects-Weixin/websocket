@@ -4,7 +4,12 @@
 <view>
   <!-- <web-view class='webview' src='http://127.0.0.1/pdf.pdf'>
   </web-view> -->
-  <web-view class='webview' src='/pages/index-mp4.html'>
+  <!-- <web-view class='webview' src='/pages/index-mp4.html'>
+    <cover-view>报告老板：有{{reviewNum}}个人正在看TA的短视频</cover-view>
   </web-view>
-  <button>反馈</button>
+  <button>反馈</button> -->
+
+  <answersheet id='answersheet' tapDismiss='true'></answersheet>
+  <view bindtap='showAnswerSheet'>点击答题卡弹窗</view>
+
 </view>

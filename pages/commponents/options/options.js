@@ -1,7 +1,7 @@
 // pages/commponents/options/options.js
 
 // 保存回调函数
-var handler=function(){}
+var handler = function() {}
 
 Component({
   /**
@@ -16,19 +16,26 @@ Component({
    */
   data: {
     options: [{
-        option: 'A'
+        option: 'A',
+        answered: true,
+        selected: false,
       },
       {
-        option: 'B'
+        option: 'B',
+        answered: true,
+        selected: false,
       },
       {
-        option: 'C'
+        option: 'C',
+        answered: false,
+        selected: false,
       },
       {
-        option: 'D'
+        option: 'D',
+        answered: false,
+        selected: false,
       },
     ]
-
   },
 
   /**
@@ -36,13 +43,27 @@ Component({
    */
   methods: {
 
-    optionClick: function (e) {
+    optionClick: function(e) {
       var item = e.currentTarget.dataset.item
-      console.log(e.currentTarget.dataset.item)
+      for (let i = 0; i < this.data.options.length; i++) {
+        var option = this.data.options[i]
+        // 按钮选中状态
+        if (i == e.currentTarget.id) {
+          option.selected = true
+        } else {
+          option.selected = false
+        }
+        this.data.options[i] = option
+      }
+      this.setData({
+        options: this.data.options
+      })
+
+      console.log(this.data.options)
       handler(item.option)
     },
 
-    updateOption: function (e,callback) {
+    updateOption: function(e, callback) {
       handler = callback
       this.setData({
         options: e

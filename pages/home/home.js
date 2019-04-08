@@ -1,13 +1,13 @@
 const ws = require('../wsservice.js');
 
 Page({
-  
+
   playVideo: function() {
     wx.playVideo({
-      url:'http:127.0.0.1/login.mp4'
+      url: 'http:127.0.0.1/login.mp4'
     })
   },
-  uploadFile:function(){
+  uploadFile: function() {
     wx.chooseVideo({
       success(res) {
         const tempFilePaths = res.tempFilePaths
@@ -23,11 +23,18 @@ Page({
             console.log('成功')
             // do something
           },
-          fail(res){
-            console.log('失败'+res)
+          fail(res) {
+            console.log('失败' + res)
           }
         })
       }
+    })
+  },
+  previewImage: function() {
+    wx.previewImage({
+      urls: ['http://sowcar.com/t6/695/1554286026x2362277776.jpg',
+      'http://sowcar.com/t6/695/1554286071x1033062845.jpg',
+      'http://sowcar.com/t6/695/1554286126x2890173921.png'],
     })
   },
   openFile: function() {
@@ -134,7 +141,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    var pages = getCurrentPages()
+    console.log('pages' + JSON.stringify(pages))
 
+    for (var page in pages) {
+      console.log('page' + page)
+    }
   },
 
   /**

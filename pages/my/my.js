@@ -4,6 +4,10 @@ const app = getApp()
 
 Page({
 
+  showAnswerSheet: function() {
+    this.selectComponent('#answersheet').showAnswerSheet()
+  },
+
   /**
    * 页面的初始数据
    */
@@ -65,7 +69,7 @@ Page({
    */
   onLoad: function(options) {
     this.selectComponent('#votes').updateProgress(this.data.votes)
-    this.selectComponent('#options').updateOption(this.data.options,function(callback){
+    this.selectComponent('#options').updateOption(this.data.options, function(callback) {
       console.log(callback)
     })
   },

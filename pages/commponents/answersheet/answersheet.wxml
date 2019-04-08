@@ -1,0 +1,12 @@
+<!--pages/commponents/answersheet/answersheet.wxml-->
+<view class='answer-sheet-page' hidden='{{isHidden}}'>
+  <view class='title'>答题卡</view>
+  <view class='content'>
+    <scroll-view class='scrollHeight'>
+      <options id='options'></options>
+    </scroll-view>
+    <view bindtap='cancelClick' class='cancel'>
+      <image class='cancelImage' src='./image/cancel@2x.png'></image>
+    </view>
+  </view>
+</view>

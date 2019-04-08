@@ -1,12 +1,19 @@
 <!--components/votes/votes.wxml-->
 <view class='page'>
-  <!-- <block wx:for='{{votes}}' wx:for-item='item' wx:key='key'> -->
+  <view class='titleText'>
+    <text>投票结果</text>
+  </view>
   <block wx:for="{{votes}}" wx:for-item="item" wx:key="key">
     <view class='voteView'>
-      <text class='text'>{{item.option}}</text>
-      <view class='progress' style='width:{{item.progress}}px;'></view>
-      <text class='text'>{{item.num}}</text>
+      <view class='textView'>
+        <text class='text'>{{item.option}}</text>
+        <text class='text'>{{item.num}}人</text>
+      </view>
+
+      <view class='progressView'>
+        <view class='progress' style='width:{{item.progress}}px;background-color:{{item.progressColor}};'></view>
+      </view>
     </view>
-  
+
   </block>
 </view>

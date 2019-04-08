@@ -1,13 +1,14 @@
 <!--pages/barrage/barrage.wxml-->
 
 <view class='page'>
-    <view class='textarea'>
-        <textarea maxlength='50' bindinput='inputTextChange' placeholder='文本默认的内容'>
-        </textarea>
+  <view class='textarea'>
+    <textarea maxlength='50' bindinput='inputTextChange' placeholder='文本默认的内容'>
+    </textarea>
+  </view>
 
-        <text class='markedtext'>0/50</text>
+  <view class='bottomView'>
+    <view class='btn' bindtap='submiClick'>
+      确认发送
     </view>
-
-    <text class='warningtext'>温馨提示：请文明用语</text>
-    <button class='btn' disabled='{{barrageDisabled}}' bindtap='submiClick'>确认发送</button>
+  </view>
 </view>
