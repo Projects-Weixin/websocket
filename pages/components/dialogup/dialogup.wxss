@@ -1,4 +1,4 @@
-/* pages/commponents/dialogup/dialogup.wxss */
+/* pages/components/dialogup/dialogup.wxss */
 
 .dl-mask {
   position: fixed;

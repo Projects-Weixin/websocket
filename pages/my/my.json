@@ -1,8 +1,8 @@
 {
   "navigationBarTitleText": "我的",
   "usingComponents": {
-      "votes": "../commponents/votes/votes",
-      "options": "../commponents/options/options",
-      "answersheet":"../commponents/answersheet/answersheet"
+      "votes": "../components/votes/votes",
+      "options": "../components/options/options",
+      "answersheet":"../components/answersheet/answersheet"
   }
 }

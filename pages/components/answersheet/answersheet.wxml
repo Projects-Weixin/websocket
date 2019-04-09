@@ -1,4 +1,4 @@
-<!--pages/commponents/answersheet/answersheet.wxml-->
+<!--pages/components/answersheet/answersheet.wxml-->
 <view class='answer-sheet-page' hidden='{{isHidden}}'>
   <view class='title'>答题卡</view>
   <view class='content'>

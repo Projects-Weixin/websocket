@@ -55,7 +55,7 @@
 
     <view class='btnstyle'>
         <navigator url='/pages/home/homeDetail/homeDetail?title=homeDetail' hover-class='navigator-hover'>
-          跳转下一页，打开webview
+          跳转下一页，webview、选项弹出框、自定义图片浏览
         </navigator>
     </view>
 
@@ -79,7 +79,7 @@
     </view>
 
 
-    <!-- commponents-->
+    <!-- components-->
     <dialogup id='dialogup'></dialogup>
     <toast id='toast' information="提交成功，我们会尽快和您联系" icon="success" showTime="1000" hideTime='2000'></toast>
 

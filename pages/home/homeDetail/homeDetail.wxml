@@ -12,4 +12,7 @@
   <answersheet id='answersheet' tapDismiss='true'></answersheet>
   <view bindtap='showAnswerSheet'>点击答题卡弹窗</view>
 
+  <photobrowser id='photobrowser'></photobrowser>
+  <button bindtap='customPreviewImage'>自定义图片浏览</button>
+
 </view>

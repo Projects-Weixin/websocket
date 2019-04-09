@@ -1,0 +1,12 @@
+function optionBackground(item) {
+  if (item.selected) {
+    return 'selected-style';
+  } else{
+    if (item.answered) {
+      return 'answered-style'
+    } else {
+      return 'unselected-style'
+    }
+  } 
+}
+module.exports.optionBackground = optionBackground;

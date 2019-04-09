@@ -1,0 +1,96 @@
+/* pages/components/photobrowser/photobrowser.wxss */
+
+.photo-browser-page {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.swiperView {
+  height: 80%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+.swiper {
+  height: 50%;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  background-color: black;
+}
+
+.toolbar {
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.btn {
+  background-color: #fff;
+  opacity: 0.3;
+  width: 64px;
+  height: 32px;
+  font-size: 14px;
+}
+
+.unselectedBtn {
+  background-color: #fff;
+  opacity: 0.3;
+}
+
+.selectedBtn {
+  background-color: #d3a573;
+  opacity: 1;
+}
+
+.action-sheet-page {
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  position: fixed;
+}
+
+.actionSheetView {
+  width: 100%;
+  height: 50%;
+  background-color: black;
+  /* opacity:0.5; */
+  position: fixed;
+  bottom: 0;
+}
+
+.actionSheetItemView {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.actionSheetItem {
+  color: #fff;
+  font-size: 14px;
+  margin-right: 7px;
+}
+
+.currentPoint {
+  width: 8px;
+  height: 8px;
+  background: rgba(211, 165, 115, 1);
+  border-radius: 4px;
+}

@@ -1,4 +1,4 @@
-/* pages/commponents/options/options.wxss */
+/* pages/components/options/options.wxss */
 
 .page {
   /* background-color: red; *//* margin: 0 auto; */

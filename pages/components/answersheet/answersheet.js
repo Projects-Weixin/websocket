@@ -1,4 +1,4 @@
-// pages/commponents/answersheet/answersheet.js
+// pages/components/answersheet/answersheet.js
 
 Component({
 
@@ -16,11 +16,11 @@ Component({
     isHidden: true,
     options: [{
         option: '1',
-        answered: false
+        answered: true
       },
       {
         option: '2',
-        answered: false
+        answered: true
       },
       {
         option: '3',

@@ -1,4 +1,4 @@
-/* pages/commponents/toast/toast.wxss */
+/* pages/components/toast/toast.wxss */
 
 .mask {
   width: 400rpx;

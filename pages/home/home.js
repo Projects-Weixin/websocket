@@ -1,7 +1,7 @@
 const ws = require('../wsservice.js');
 
 Page({
-
+  
   playVideo: function() {
     wx.playVideo({
       url: 'http:127.0.0.1/login.mp4'

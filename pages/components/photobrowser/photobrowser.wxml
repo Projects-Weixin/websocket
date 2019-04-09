@@ -1,0 +1,35 @@
+<!--pages/components/photobrowser/photobrowser.wxml-->
+<view class='photo-browser-page' catchtap='showPhotoBrowser' data-hidden='true' hidden='{{isPhotoBrowserHidden}}'>
+  <view class='swiperView'>
+    <swiper class='swiper' current='{{current}}' bindchange='bindchange'>
+      <swiper-item wx:for='{{pics}}' wx:for-item='item' wx:key='*this'>
+        <image class='image' mode='aspectFit' lazy-load='true' bindload='eventhandle' src='{{item.url}}'>
+        </image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class='toolbar'>
+    <button class='btn' catchtap="showActionSheet" data-hidden='false' data-current='{{current}}'>
+      {{current+1}}/{{pics.length}}
+    </button>
+    <button class=" 'btn' {{pics[current].unstudied ? 'selectedBtn': 'unselectedBtn' }}" catchtap='unstudiedClick'>
+      不懂
+    </button>
+  </view>
+
+  <view class='action-sheet-page' catchtap="showActionSheet" data-hidden='true' hidden='{{isActionSheetHidden}}'>
+    <scroll-view class='actionSheetView'>
+      <block wx:for='{{pics}}' wx:for-index='index' wx:key='*this'>
+        <view class='actionSheetItemView'>
+          <view class='actionSheetItem ' data-hidden='true' data-current='{{index}}' catchtap="showActionSheet">
+            第 {{index+1}} 页
+          </view>
+          <view class='currentPoint' hidden='{{index!=current}}'></view>
+        </view>
+
+      </block>
+    </scroll-view>
+
+  </view>
+</view>

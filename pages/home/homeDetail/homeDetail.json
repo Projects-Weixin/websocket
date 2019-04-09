@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-      "answersheet": "../../commponents/answersheet/answersheet"
+    "answersheet": "../../components/answersheet/answersheet",
+    "photobrowser": "../../components/photobrowser/photobrowser"
   },
   "navigationBarTitleText": "title内容"
 }

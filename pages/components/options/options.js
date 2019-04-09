@@ -1,4 +1,4 @@
-// pages/commponents/options/options.js
+// pages/components/options/options.js
 
 // 保存回调函数
 var handler = function() {}

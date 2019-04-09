@@ -1,4 +1,4 @@
-// pages/commponents/dialogup/dialogup.js
+// pages/components/dialogup/dialogup.js
 Component({
   /**
    * 组件的属性列表

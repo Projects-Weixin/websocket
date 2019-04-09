@@ -1,4 +1,4 @@
-// pages/commponents/toast/toast.js
+// pages/components/toast/toast.js
 Component({
   /**
   * 组件的属性列表

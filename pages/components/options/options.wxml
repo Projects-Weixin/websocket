@@ -1,0 +1,16 @@
+<!--pages/components/options/options.wxml-->
+<wxs src="./options.wxs" module="m"/>
+
+<view class='page'>
+  <block wx:for='{{options}}' wx:for-item='item' wx:key='key'>
+    <view id='{{index}}' 
+    class="options {{m.optionBackground(item)}}"
+      size='60'
+       data-item='{{item}}' 
+       bindtap='optionClick'>
+      {{item.option}}
+    </view>
+  </block>
+</view>
+<!-- 三目运算符 -->
+<!-- {{item.selected ? 'selected-style' : item.answered ? 'answered-style':'unselected-style' }} -->
