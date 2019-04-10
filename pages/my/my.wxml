@@ -6,5 +6,5 @@
   
 <view class='page'>
   <votes id='votes'></votes>
-  <options id='options'></options>
+  <options id='options' multiple='true'></options>
  </view>

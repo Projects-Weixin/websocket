@@ -1,0 +1,29 @@
+<!--pages/components/answerresultssheet/answerresultssheet.wxml-->
+<view class='answer-result-sheet-page' hidden='{{isHidden}}'>
+  <view class='navView'>
+    <view class='navOptionView'> 
+      <view class='navOptionImage'></view>
+      <text class='text'>11/21 题</text>
+    </view>
+    <view class='navTrueView'>
+      <icon class='icon' type="success" color="#52C261"></icon>
+      <text class='text navTextRight'>11题</text>
+    </view>
+    <view class='text navFalseView'>
+      <icon class='icon' type="clear" color="#FF3333"></icon>
+      <text class='text navTextRight'>12题</text>
+    </view>
+  </view>
+
+  <view class='listView' style='height:{{height-120}}px'>
+    <block wx:for='{{lists}}' wx:for-item='item' wx:for-index='index' wx:key='key'>
+      <view class="listItemView {{selectIndex-1 == index}} ? 'listItemViewSelectBorder' : 'listItemViewBorder' " catchtap='selectedItem' data-index='{{index}}'>
+        <text class='text listItemTextRight'>{{index+1}}.选择</text>
+        <icon class='icon' type="{{item.correct ? 'success':'clear'}}" color="{{item.correct ? '#52C261':'#FF3333'}}"></icon>
+      </view>
+    </block>
+  </view>
+  <view bindtap='cancelClick' class='cancel'>
+    <image class='cancelImage' src='../answersheet/image/cancel@2x.png'></image>
+  </view>
+</view>

@@ -1,6 +1,6 @@
 <!--pages/components/photobrowser/photobrowser.wxml-->
 <view class='photo-browser-page' catchtap='showPhotoBrowser' data-hidden='true' hidden='{{isPhotoBrowserHidden}}'>
-  <view class='swiperView'>
+  <view class='swiperView' style='height:{{height-50}}px'>
     <swiper class='swiper' current='{{current}}' bindchange='bindchange'>
       <swiper-item wx:for='{{pics}}' wx:for-item='item' wx:key='*this'>
         <image class='image' mode='aspectFit' lazy-load='true' bindload='eventhandle' src='{{item.url}}'>
@@ -10,25 +10,24 @@
   </view>
 
   <view class='toolbar'>
-    <button class='btn' catchtap="showActionSheet" data-hidden='false' data-current='{{current}}'>
+    <button class='btn btnleft' catchtap="showActionSheet" data-hidden='false' data-current='{{current}}'>
       {{current+1}}/{{pics.length}}
     </button>
-    <button class=" 'btn' {{pics[current].unstudied ? 'selectedBtn': 'unselectedBtn' }}" catchtap='unstudiedClick'>
+    <button class="'btn btnright' {{pics[current].unstudied ? 'selectedBtn': 'unselectedBtn' }}" catchtap='unstudiedClick'>
       不懂
     </button>
   </view>
 
   <view class='action-sheet-page' catchtap="showActionSheet" data-hidden='true' hidden='{{isActionSheetHidden}}'>
-    <scroll-view class='actionSheetView'>
-      <block wx:for='{{pics}}' wx:for-index='index' wx:key='*this'>
-        <view class='actionSheetItemView'>
-          <view class='actionSheetItem ' data-hidden='true' data-current='{{index}}' catchtap="showActionSheet">
-            第 {{index+1}} 页
-          </view>
-          <view class='currentPoint' hidden='{{index!=current}}'></view>
-        </view>
-
-      </block>
+    <scroll-view scroll-y='true'
+     style="height:{{pics.length*40>height/2 ? height/2 : pics.length*40}}px" 
+     class='actionSheetView'>
+        <block wx:for='{{pics}}' wx:for-index='index' wx:key='*this'>
+            <view class='actionSheetItemView' data-hidden='true' data-current='{{index}}' catchtap="showActionSheet">
+                <view class='actionSheetItem'>第 {{index+1}} 页</view>
+                <view class='currentPoint' hidden='{{index!=current}}'></view>
+            </view>
+        </block>
     </scroll-view>
 
   </view>

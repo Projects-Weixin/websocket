@@ -8,3 +8,66 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+/* 
+{
+  "pages": [
+    "pages/home/home",
+    "pages/chat/chat",
+    "pages/my/my",
+    "pages/home/homeDetail/homeDetail",
+    "pages/news/news",
+    "pages/news/news-detail",
+    "pages/websocket/websocket",
+    "pages/form/form",
+    "pages/video/video",
+    "pages/livepusher/livepusher",
+    "pages/liveplayer/liveplayer",
+    "pages/navtab/navtab",
+    "pages/barrage/barrage",
+    "pages/flexbox/flexbox"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#35c8fb",
+    "color": "#7f8389",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "pages/image/tabbar/chat_list_unselected.png",
+        "selectedIconPath": "pages/image/tabbar/chat_list.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "聊天",
+        "iconPath": "pages/image/tabbar/chat_list_unselected.png",
+        "selectedIconPath": "pages/image/tabbar/chat_list.png"
+      },
+      {
+        "pagePath": "pages/websocket/websocket",
+        "text": "会话",
+        "iconPath": "pages/image/tabbar/chat_list_unselected.png",
+        "selectedIconPath": "pages/image/tabbar/chat_list.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻",
+        "iconPath": "pages/image/tabbar/chat_list_unselected.png",
+        "selectedIconPath": "pages/image/tabbar/chat_list.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "pages/image/tabbar/chat_list_unselected.png",
+        "selectedIconPath": "pages/image/tabbar/chat_list.png"
+      }
+    ]
+  }
+}
+ */

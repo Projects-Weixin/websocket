@@ -8,7 +8,11 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    // 是否多选，默认单选
+    multiple: {
+      type: Boolean,
+      value: false
+    }
   },
 
   /**
@@ -45,22 +49,44 @@ Component({
 
     optionClick: function(e) {
       var item = e.currentTarget.dataset.item
-      for (let i = 0; i < this.data.options.length; i++) {
+      var selectedOptions = []
+
+      // 多选
+      if (this.data.multiple) {
+        var i = parseInt(e.currentTarget.id)
         var option = this.data.options[i]
-        // 按钮选中状态
-        if (i == e.currentTarget.id) {
-          option.selected = true
-        } else {
-          option.selected = false
-        }
+        option.selected = !option.selected
         this.data.options[i] = option
+
+        // 筛选出 选中的选项
+        for (let i=0; i<this.data.options.length; i++) {
+          var option = this.data.options[i]
+          if (option.selected) {
+            selectedOptions.push(option.option)
+          }
+        }
       }
+      // 单选
+      else {
+        for (let i = 0; i < this.data.options.length; i++) {
+          var option = this.data.options[i]
+          // 按钮选中状态
+          if (i == e.currentTarget.id) {
+            option.selected = true
+          } else {
+            option.selected = false
+          }
+          this.data.options[i] = option
+        }
+        selectedOptions.push(item.option)
+      }
+
       this.setData({
         options: this.data.options
       })
 
-      console.log(this.data.options)
-      handler(item.option)
+      console.log(selectedOptions)
+      handler(selectedOptions)
     },
 
     updateOption: function(e, callback) {

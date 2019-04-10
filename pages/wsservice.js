@@ -1,4 +1,5 @@
-var socketURL = 'ws://192.168.21.5:8082/ws?userId=11999999&classId=222999999'
+var socketURL = 'ws://www.baidu.com'
+// var socketURL = 'ws://192.168.21.5:8082/ws?userId=11999999&classId=222999999'
 //socket任务
 var socketTask
 //定时器任务

@@ -1,6 +1,13 @@
 // pages/home/homeDetail/homeDetail.js
 Page({
 
+  showAnswerResultsSheet:function() {
+    // 方法返回 select index
+    this.selectComponent('#answerresultssheet').showAnswerResultsSheet(false,function(callback) {
+      console.log('answerresultssheet calback'+callback)
+    })
+  },
+
   showAnswerSheet: function() {
     this.selectComponent('#answersheet').showAnswerSheet('', function(callback) {
       console.log('homedetail' + callback)
@@ -8,6 +15,7 @@ Page({
   },
 
   customPreviewImage: function() {
+    this.selectComponent('#photobrowser').setPics(this.data.pics)
     this.selectComponent('#photobrowser').showPhotoBrowser(false)
   },
   /**
@@ -32,7 +40,44 @@ Page({
       // {
       //   option: 'F'
       // },
-    ]
+    ],
+    pics: [{
+        url: 'http://sowcar.com/t6/695/1554286026x2362277776.jpg',
+        unstudied: false
+      },
+      {
+        url: 'http://sowcar.com/t6/695/1554286071x1033062845.jpg',
+        unstudied: false
+      },
+      {
+        url: 'http://sowcar.com/t6/695/1554286126x2890173921.png',
+        unstudied: false
+      },
+      {
+        url: 'http://sowcar.com/t6/695/1554286071x1033062845.jpg',
+        unstudied: false
+      },
+      {
+        url: 'http://sowcar.com/t6/695/1554286126x2890173921.png',
+        unstudied: false
+      },
+      {
+        url: 'http://sowcar.com/t6/695/1554286071x1033062845.jpg',
+        unstudied: false
+      },
+      {
+        url: 'http://sowcar.com/t6/695/1554286126x2890173921.png',
+        unstudied: false
+      },
+      {
+        url: 'http://sowcar.com/t6/695/1554286071x1033062845.jpg',
+        unstudied: false
+      },
+      {
+        url: 'http://sowcar.com/t6/695/1554286126x2890173921.png',
+        unstudied: false
+      }
+    ],
   },
 
   /**
