@@ -1,14 +1,12 @@
 <!--pages/barrage/barrage.wxml-->
 
 <view class='page'>
-  <view class='textarea'>
+  <view class='textarea' style='height:{{height-120}}px'>
     <textarea maxlength='50' bindinput='inputTextChange' placeholder='文本默认的内容'>
     </textarea>
   </view>
 
-  <view class='bottomView'>
-    <view class='btn' bindtap='submiClick'>
-      确认发送
-    </view>
+  <view class='btn' bindtap='submiClick'>
+    确认发送
   </view>
 </view>

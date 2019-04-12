@@ -1,20 +1,11 @@
-// pages/barrage/barrage.js
-
+// pages/home/votepage/votepage.js
 const app = getApp()
 
 Page({
-
-  inputTextChange: function(e) {
-    this.setData({
-      inputText: e.detail.value
-    })
-  },
-
-  submiClick: function() {
-    console.log(this.data.inputText)
-    wx.showToast({
-      title: '提交成功',
-    })
+  voteClick: function() {
+    if (this.data.selectedOptions.length > 0) {
+      console.log('提交投票：', this.data.selectedOptions)      
+    }
   },
 
   /**
@@ -22,14 +13,38 @@ Page({
    */
   data: {
     height: app.globalData.screen.height,
-    inputText: '',
-    barrageDisabled: true,
+    selectedOptions:[],
+    multiple:false,
+    isContent:true,
+    options: [{
+        option: 'A'
+      },
+      {
+        option: 'B'
+      },
+      {
+        option: 'C'
+      },
+      {
+        option: 'D'
+      },
+      {
+        option: 'E'
+      },
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    var that = this
+    this.selectComponent('#options').updateOption(this.data.options, function(callback) {
+      that.setData({
+        selectedOptions:callback
+      })
+      console.log(callback)
+    })
 
   },
 

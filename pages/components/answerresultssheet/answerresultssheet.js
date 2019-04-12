@@ -7,7 +7,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    selectIndex: {
+    currentNum: {
       type: Number,
       value: 1
     }
@@ -16,37 +16,64 @@ Component({
 
   /**
    * 组件的初始数据
+   * answertype:0-正确，1-错误，2-对错，3不知道
    */
   data: {
     height: app.globalData.screen.height,
     isHidden: true,
     lists: [{
-      correct: true
+      answertype: 0
     }, {
-      correct: false
+      answertype: 1
     }, {
-      correct: false
+      answertype: 2
     }, {
-      correct: true
+      answertype: 3
     }, {
-      correct: true
+      answertype: 1
     }, {
-      correct: true
+      answertype: 2
     }, {
-      correct: true
+      answertype: 1
     }, {
-      correct: true
+      answertype: 0
     }, {
-      correct: true
+      answertype: 2
     }, {
-      correct: true
+      answertype: 3
     }, {
-      correct: true
+      answertype: 0
     }, {
-      correct: true
+      answertype: 1
+    }, , {
+      answertype: 1
     }, {
-      correct: true
-    }]
+      answertype: 2
+    }, {
+      answertype: 3
+    }, {
+      answertype: 1
+    }, {
+      answertype: 2
+    }, {
+      answertype: 1
+    }, {
+      answertype: 0
+    }, {
+      answertype: 2
+    }, {
+      answertype: 3
+    }, {
+      answertype: 0
+    }, {
+      answertype: 1
+    },],
+    images: [
+      './image/as-success.png',
+      './image/as-fail.png',
+      './image/as-success-fail.png',
+      './image/as-unknow.png',
+    ]
   },
 
   /**
@@ -65,6 +92,8 @@ Component({
     },
 
     showAnswerResultsSheet: function(e, handler) {
+      this.selectComponent('#answerresultsnav')
+
       callback = handler
       console.log(e)
       this.setData({

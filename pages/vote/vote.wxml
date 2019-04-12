@@ -1,0 +1,23 @@
+<!--pages/home/votepage/votepage.wxml-->
+<view class='vote-page'>
+  <view class='timeView'>
+    <image class='timeView-image' src='./image/vote-time.png'></image>
+    <view class='timeView-text'>00:00:11</view>
+  </view>
+  <scroll-view class='contentScrollView' hidden='{{!isContent}}' style='height:{{height-184-40}}px' scroll-y='true'>
+    <view class='content-title'>
+      近期陆续曝光了一些制药企业为了谋求暴 利，用经生石灰处理过的皮革废料，熬制 成工业明胶，制成药用胶囊。下列说法错 误的是
+    </view>
+    <view class='content-content'>
+      A.工业明胶是-种蛋白质，经常显现出鲜艳的颜 色，可作为食品添加剂中的着色剂使用\n B.阿莫西林是一种最常用的青霉素类广谱抗生素。 病人在使用青霉素前一定要进行皮试\n C.皮革在加工使用含铬的鞣制剂，可使人体内的蛋 白质变性\n D.生石灰与水的反应产物俗称熟石灰，可以治理酸
+    </view>
+  </scroll-view>
+
+  <view class='optionSheetView'>
+    <scroll-view class='sheetScrollView' scroll-y='true'>
+      <options id='options'></options>
+    </scroll-view>
+    <view class='btn' style="color:{{selectedOptions.length > 0 ? '#333333':''}}" catchtap='voteClick'>确定投票</view>
+  </view>
+
+</view>

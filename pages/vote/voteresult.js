@@ -1,36 +1,34 @@
-// pages/barrage/barrage.js
-
-const app = getApp()
-
+// pages/votepage/voteresultpage.js
 Page({
-
-  inputTextChange: function(e) {
-    this.setData({
-      inputText: e.detail.value
-    })
-  },
-
-  submiClick: function() {
-    console.log(this.data.inputText)
-    wx.showToast({
-      title: '提交成功',
-    })
-  },
 
   /**
    * 页面的初始数据
    */
   data: {
-    height: app.globalData.screen.height,
-    inputText: '',
-    barrageDisabled: true,
+    isContent: true,
+    votes: [{
+        option: 'A',
+        num: 20,
+        progress: 100
+      },
+      {
+        option: 'B',
+        num: 30,
+        progress: 100
+      },
+      {
+        option: 'C',
+        num: 40,
+        progress: 100
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.selectComponent('#votes').updateProgress(this.data.votes)
   },
 
   /**

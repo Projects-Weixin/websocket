@@ -1,0 +1,84 @@
+/* pages/home/votepage/votepage.wxss */
+
+.vote-page {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.contentScrollView {
+  width: 100%;
+}
+
+.optionSheetView {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 184px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px -2px 2px 0px rgba(204, 204, 204, 0.5);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.sheetScrollView {
+  width: 100%;
+  height: 112px;
+}
+
+.timeView {
+  display: flex;
+  margin-top: 24px;
+  margin-left: 24px;
+}
+
+.timeView-image {
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+}
+
+.timeView-text {
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  line-height: 14px;
+}
+
+.content-title {
+  margin-top: 16px;
+  margin-left: 24px;
+  margin-right: 23px;
+  font-size: 18px;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  line-height: 32px;
+}
+
+.content-content {
+  margin-left: 24px;
+  margin-right: 23px;
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  line-height: 24px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 24px;
+  margin-right: 24px;
+  height: 48px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  border: 1px solid rgba(238, 238, 238, 1);
+  font-size: 16px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(204, 204, 204, 1);
+  line-height: 16px;
+}

@@ -3,7 +3,7 @@
 .answer-result-sheet-page {
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: white;
   z-index: 80;
   position: fixed;
   top: 0;
@@ -12,61 +12,16 @@
   bottom: 0;
 }
 
-.navView {
-  width: 100%;
-  height: 60px;
-  background: rgba(247, 248, 249, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navOptionView {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 115px;
-  height: 34px;
-  background: rgba(255, 255, 255, 1);
-  border-radius: 20px;
-  border: 1px solid rgba(238, 238, 238, 1);
-  margin-right: 24px;
-}
-
-.navOptionImage {
-  background-color: gray;
-  width: 20px;
-  height: 18px;
-  margin-right: 8px;
-}
-
-.navTrueView {
-  display: flex;
-  align-items: center;
-  margin-right: 24px;
-  height: 20px;
-}
-
-.navFalseView {
-  display: flex;
-  align-items: center;
-  height: 20px;
-}
-
-.navTextRight {
-  margin-left: 8px;
-}
-
 .listView {
   width: 100%;
-  background-color: white;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 24px;
 }
 
 .listItemView {
-  /* margin-left: 24px;
-  margin-top: 24px; */
+  margin-left: 24px;
+  margin-top: 24px;
   width: 93px;
   height: 40px;
   background: rgba(255, 255, 255, 1);
@@ -78,13 +33,14 @@
 }
 
 .listItemViewSelectBorder {
-  border:1px solid rgba(51,51,51,1);
-}
-.listItemViewBorder {
-    border: 1px solid rgba(238, 238, 238, 1);
+  border: 1px solid rgba(51, 51, 51, 1);
 }
 
-.listItemTextRight {
+.listItemViewBorder {
+  border: 1px solid rgba(238, 238, 238, 1);
+}
+
+.list-text-icon-space {
   margin-right: 10px;
 }
 

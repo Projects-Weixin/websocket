@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "votes": "../components/votes/votes"
+  }
+}

@@ -4,7 +4,7 @@ Component({
 
   properties: {
     // 选项 选中时，隐藏当前页面
-    tapDismiss: {
+    pageDismiss: {
       type: Boolean,
       value: false
     }
@@ -50,7 +50,7 @@ Component({
       this.selectComponent('#options').updateOption(this.data.options, function(callback) {
         console.log('answersheet' + callback)
         handler(callback)
-        if (that.data.tapDismiss) {
+        if (that.data.pageDismiss) {
           that.setData({
             isHidden:true
           })

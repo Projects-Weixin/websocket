@@ -1,0 +1,35 @@
+<!--pages/components/answerresultssheet/answerresultsnav.wxml-->
+<view class='view'>
+
+  <!-- 正确、错误、对错、不知道 -->
+  <view class='navView' hidden='{{type!=0}}'>
+    <view class='navOptionView type0-item-space' catchtap='optionClick'>
+      <view class='navOptionImage icon-text-space'></view>
+      <text class='text'>{{currentNum}}/21 题</text>
+    </view>
+    <view class='type0-itemView'>
+      <block wx:for='{{resultTypes}}'>
+        <view class='type0-item'>
+          <image class='icon icon-text-space' src='{{item.image}}'></image>
+          <text class='text'>{{item.num}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 正确、错误 -->
+  <view class='navView' hidden='{{type!=1}}'>
+    <view class='navOptionView type1-item-space' catchtap='optionClick'>
+      <view class='navOptionImage icon-text-space'></view>
+      <text class='text'>{{currentNum}}/21 题</text>
+    </view>
+    <view class='navTrueView type1-item-space'>
+      <icon class='icon icon-text-space' type="success" color="#52C261"></icon>
+      <text class='text navTextRight'>11题</text>
+    </view>
+    <view class='text navFalseView'>
+      <icon class='icon icon-text-space' type="clear" color="#FF3333"></icon>
+      <text class='text navTextRight'>12题</text>
+    </view>
+  </view>
+</view>
