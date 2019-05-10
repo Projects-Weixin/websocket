@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "photobrowser": "/pages/components/photobrowser/photobrowser"
+  },
+  "pageOrientation": "auto"
+}

@@ -3,21 +3,22 @@ const ws = require('pages/wsservice.js');
 
 //app.js
 App({
+  onShow:function() {
+    console.log('app+show')
+  },
+  onHide:function() {
+    console.log('app+hide')
+  },
+  
   onLaunch: function () {
     // socket 连接
-    ws.webSocket.connectSocket()
+    // ws.webSocket.connectSocket()
 
-    // socket 接收消息
-    ws.onSocketMessage(function (handler) {
+    // // socket 接收消息
+    // ws.onSocketMessage(function (handler) {
 
-    })
+    // })
 
-    // setTimeout(function(){
-    //   let pages = JSON.stringify(getCurrentPages())
-    //   console.log('app = pages' + getCurrentPages()[0], pages, pages.length)
-
-      
-    // },4000)
 
     var pages = getCurrentPages()
     console.log('pages'+pages)
@@ -66,13 +67,16 @@ App({
       }
     })
 
+    // console.log(wx.getMenuButtonBoundingClientRect())
+
+
     var that = this
     // 获取系统信息
     wx.getSystemInfo({
       success: function(res) {
         console.log('height=' + res.windowHeight);
         console.log('width=' + res.windowWidth);
-
+        that.globalData.systemInfo = res
         that.globalData.screen.width = res.windowWidth
         that.globalData.screen.height = res.windowHeight
       },
@@ -80,6 +84,7 @@ App({
   },
 
   globalData: {
+    systemInfo:{},
     userInfo: null,
     screen:{
       width:0,

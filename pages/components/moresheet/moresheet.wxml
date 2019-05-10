@@ -1,0 +1,19 @@
+<!--components/moresheet/moresheet.wxml-->
+<view class='page' hidden='{{isHidden}}'>
+  <view class='contentView' style='height:{{width/2}}px'>
+    <block wx:for='{{items}}' wx:for-index='index' wx:key='*this'>
+      <view class='itemView' style='width:{{width/2}}px;height:{{width/2}}px' id='{{index}}' catchtap='itemClick'>
+        <view class='imageTextView'>
+          <image class='itemImage' src='{{item.image}}'></image>
+          <view class='itemText'>{{item.title}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='bottomView'>
+    <view class='cancelView' catchtap='showMoreSheet' data-hidden='true'>
+      <image class='image' src='./image/more-cancel.png'></image>
+    </view>
+  </view>
+</view>
+<!-- style='width:{{width/2}}px;height:{{width/2}}px' -->

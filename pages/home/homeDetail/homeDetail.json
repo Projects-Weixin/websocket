@@ -1,8 +1,9 @@
 {
   "usingComponents": {
     "answersheet": "../../components/answersheet/answersheet",
-    "answerresultssheet":"../../components/answerresultssheet/answerresultssheet",
-    "photobrowser": "../../components/photobrowser/photobrowser"
+    "answerresultssheet": "../../components/answerresultssheet/answerresultssheet",
+    "photobrowser": "../../components/photobrowser/photobrowser",
+    "navbar": "/pages/components/navbar/navbar"
   },
   "navigationBarTitleText": "title内容"
 }

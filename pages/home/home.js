@@ -1,7 +1,7 @@
 const ws = require('../wsservice.js');
 
 Page({
-  
+
   playVideo: function() {
     wx.playVideo({
       url: 'http:127.0.0.1/login.mp4'
@@ -33,8 +33,9 @@ Page({
   previewImage: function() {
     wx.previewImage({
       urls: ['http://sowcar.com/t6/695/1554286026x2362277776.jpg',
-      'http://sowcar.com/t6/695/1554286071x1033062845.jpg',
-      'http://sowcar.com/t6/695/1554286126x2890173921.png'],
+        'http://sowcar.com/t6/695/1554286071x1033062845.jpg',
+        'http://sowcar.com/t6/695/1554286126x2890173921.png'
+      ],
     })
   },
   openFile: function() {
@@ -116,17 +117,23 @@ Page({
     lists: ['aaa', 'bbb'],
     isloading: false,
     pickterDate: '2016-09-01',
-    inputText: '默认输入框内容'
+    inputText: '默认输入框内容',
+    // 组件所需的参数
+    nvabarData: {
+      showCapsule: 1, //是否显示左上角图标   1表示显示    0表示不显示
+      title: '我的主页', //导航栏 中间的标题
+    },
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    ws.onSocketMessage(function(handler) {
-      console.log('home页面：' + handler)
-    })
-
+    // ws.onSocketMessage(function(handler) {
+    //   console.log('home页面：' + handler)
+    // })
+    
+    this.selectComponent("#navbar")
     this.toast = this.selectComponent("#toast");
   },
 

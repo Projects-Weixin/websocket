@@ -2,7 +2,7 @@
 <view class='answer-result-sheet-page' hidden='{{isHidden}}'>
   <answerresultsnav id='answerresultsnav' type='1' currentNum='{{currentNum}}'></answerresultsnav>
 
-  <scroll-view style='width:100%;height:{{height-120}}px;' scroll-y='true'>
+  <scroll-view style='width:100%;height:{{height-60}}px;' scroll-y='true'>
     <view class='listView'>
       <block wx:for='{{lists}}' wx:for-item='item' wx:for-index='index' wx:key='*this'>
         <view class=" 'listItemView' {{currentNum-1 == index}} ? 'listItemViewBorder' : 'listItemViewSelectBorder' " catchtap='selectedItem' data-index='{{index}}'>

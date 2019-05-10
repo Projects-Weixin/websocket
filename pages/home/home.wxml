@@ -3,14 +3,17 @@
 <import scr='../video/video' />
 <import scr='../my/my' />
 
-<scroll-view>
+<view class='page'>
+   <navbar id="navbar" title="主页"></navbar>
+
+  <scroll-view>
     <button wx:for="{{lists}}" wx:for-item="item" wx:for-index="index" wx:key="key">
       {{item +'+'+ index}}
     </button>
     <block wx:for="{{lists}}" wx:for-item="item" wx:key="key">
-        <button>
-          {{item +'+'+ 10}}
-        </button>
+      <button>
+        {{item +'+'+ 10}}
+      </button>
     </block>
 
     <view inputstyle>
@@ -20,43 +23,43 @@
     </view>
 
     <view>
-        <template is="homeTemplate" />
-        <icon type="success" size="40" color='red' />
-        <text class='border'>ssssss\t阿萨\n德龙卷_______()（）风nnnnnn盛开的花\nsssssjjjjj\nsldjflsjdf
+      <template is="homeTemplate" />
+      <icon type="success" size="40" color='red' />
+      <text class='border'>ssssss\t阿萨\n德龙卷_______()（）风nnnnnn盛开的花\nsssssjjjjj\nsldjflsjdf
         </text>
     </view>
 
     <view class='inputstyle'>
-        <navigator url='/pages/navtab/navtab'>
-          navtab
-        </navigator>
+      <navigator url='/pages/navtab/navtab'>
+        navtab
+      </navigator>
     </view>
 
     <view class='inputstyle'>
-        <navigator url='/pages/my/my'>
-          webview
-        </navigator>
+      <navigator url='/pages/my/my'>
+        webview
+      </navigator>
     </view>
 
     <view class='inputstyle'>
-        <navigator url='/pages/form/form'>
-          form
-        </navigator>
+      <navigator url='/pages/form/form'>
+        form
+      </navigator>
     </view>
 
     <view class='btnstyle'>
-        <navigator url='/pages/video/video'>
-          视频
-        </navigator>
+      <navigator url='/pages/video/video'>
+        视频
+      </navigator>
     </view>
     <button bindtap='openFile'>打开文件</button>
     <button bindtap='uploadFile'>上传图片</button>
     <button bindtap='previewImage'>图片浏览</button>
 
     <view class='btnstyle'>
-        <navigator url='/pages/home/homeDetail/homeDetail?title=homeDetail' hover-class='navigator-hover'>
-          跳转下一页，webview、选项弹出框、自定义图片浏览
-        </navigator>
+      <navigator url='/pages/home/homeDetail/homeDetail?title=homeDetail' hover-class='navigator-hover'>
+        跳转下一页，webview、选项弹出框、自定义图片浏览
+      </navigator>
     </view>
 
     <view class='btnstyle' bindtap='toggleDialogup'>
@@ -83,4 +86,5 @@
     <dialogup id='dialogup'></dialogup>
     <toast id='toast' information="提交成功，我们会尽快和您联系" icon="success" showTime="1000" hideTime='2000'></toast>
 
-</scroll-view>
+  </scroll-view>
+</view>

@@ -1,33 +1,44 @@
 <!--pages/components/photobrowser/photobrowser.wxml-->
-<view class='photo-browser-page' catchtap='showPhotoBrowser' data-hidden='true' hidden='{{isPhotoBrowserHidden}}'>
-  <view class='swiperView' style='height:{{height-50}}px'>
-    <swiper class='swiper' current='{{current}}' bindchange='bindchange'>
+<view class='photo-browser-page' wx:if='{{!isPhotoBrowserHidden}}'>
+  <!-- 浏览器 -->
+  <view class='swiperView' style='height:{{height}}px' catchtap='showPhotoBrowser' data-hidden='true'>
+    <swiper class='swiper' style='height:{{height}}px' current='{{cur}}' bindchange='bindchange'>
       <swiper-item wx:for='{{pics}}' wx:for-item='item' wx:key='*this'>
-        <image class='image' mode='aspectFit' lazy-load='true' bindload='eventhandle' src='{{item.url}}'>
-        </image>
+
+        <scroll-view scroll-x='true' scoll-y='true' style="width:{{width}}px;height:{{height}}px; background: yellow;">
+          <movable-area style="width:{{width}}px;height:{{height}}px; background: red;" scale-area overflow:hidden>
+            <movable-view style="width:{{width}}px;height:{{height}}px background: blue;" out-of-bounds='true' direction="all" bindchange="onImageChange" bindscale="onImageScale" scale scale-min="1" scale-max="2" scale-value="1">
+              <image class='image' style='height:{{height}}px' mode='aspectFit' lazy-load='true' bindload='eventhandle' src='{{item.url}}'>
+              </image>
+            </movable-view>
+          </movable-area>
+        </scroll-view>
+
+
       </swiper-item>
     </swiper>
   </view>
 
-  <view class='toolbar'>
-    <button class='btn btnleft' catchtap="showActionSheet" data-hidden='false' data-current='{{current}}'>
-      {{current+1}}/{{pics.length}}
+  <!-- toolbar -->
+  <view class='toolbar' style='width:{{width-16*2}}px'>
+    <button class='btn btnleft' catchtap="showActionSheet" data-hidden='false' data-current='{{cur}}'>
+      {{cur+1}}/{{pics.length}}
     </button>
-    <button class="'btn btnright' {{pics[current].unstudied ? 'selectedBtn': 'unselectedBtn' }}" catchtap='unstudiedClick'>
+    <!-- <view style='width:100%;'></view> -->
+    <button class="'btn btnright' {{pics[cur].unstudied ? 'selectedBtn': 'unselectedBtn' }}" catchtap='unstudiedClick'>
       不懂
     </button>
   </view>
 
-  <view class='action-sheet-page' catchtap="showActionSheet" data-hidden='true' hidden='{{isActionSheetHidden}}'>
-    <scroll-view scroll-y='true'
-     style="height:{{pics.length*40>height/2 ? height/2 : pics.length*40}}px" 
-     class='actionSheetView'>
-        <block wx:for='{{pics}}' wx:for-index='index' wx:key='*this'>
-            <view class='actionSheetItemView' data-hidden='true' data-current='{{index}}' catchtap="showActionSheet">
-                <view class='actionSheetItem'>第 {{index+1}} 页</view>
-                <view class='currentPoint' hidden='{{index!=current}}'></view>
-            </view>
-        </block>
+  <!-- 页面选择器 -->
+  <view class='action-sheet-page' catchtap="showActionSheet" data-hidden='true' wx:if='{{!isActionSheetHidden}}'>
+    <scroll-view scroll-y='true' style="height:{{pics.length*40>height/2 ? height/2 : pics.length*40}}px" class='actionSheetView'>
+      <block wx:for='{{pics}}' wx:for-index='index' wx:key='*this'>
+        <view class='actionSheetItemView' data-hidden='true' data-current='{{index}}' catchtap="showActionSheet">
+          <view class='actionSheetItem'>第 {{index+1}} 页</view>
+          <view class='currentPoint' hidden='{{index!=cur}}'></view>
+        </view>
+      </block>
     </scroll-view>
 
   </view>

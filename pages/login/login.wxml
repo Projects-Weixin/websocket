@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class='viewPage' style="height:{{h}}px;width:{{w}}px">
+  <view class='inputView' style="width:{{w}}px">
+    <input class='input' style="width:{{w-36}}px" id='account' placeholder='请输入账号' bindinput='eventhandle'></input>
+  </view>
+  <view class='lineView'></view>
+  <view class='inputView' style="width:{{w}}px">
+    <input class='input' password='true' type='next' confirm-type='next' style="width:{{w-36}}px" id='password' placeholder='请输入密码' bindinput='eventhandle'></input>
+  </view>
+
+  <view class="btn {{password != '' && account != '' ? 'text' : ''}}" catchtap='loginClick'>登录</view>
+
+  <moresheet id='moresheet'></moresheet>
+</view>

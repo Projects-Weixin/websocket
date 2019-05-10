@@ -1,0 +1,6 @@
+/* pages/audio/audioplay.wxss */
+
+.page {
+  width: 100%;
+  height: 100%;
+}

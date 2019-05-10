@@ -1,0 +1,4 @@
+<!--pages/audio/audioplay.wxml-->
+<view class='page'>
+  <web-view src='{{url}}'></web-view>
+</view>

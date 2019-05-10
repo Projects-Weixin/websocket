@@ -1,7 +1,9 @@
 {
   "navigationBarTitleText": "主页",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "dialogup": "../components/dialogup/dialogup",
-    "toast": "../components/toast/toast"
+    "toast": "../components/toast/toast",
+    "navbar": "/pages/components/navbar/navbar"
   }
 }

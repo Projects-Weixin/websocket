@@ -1,10 +1,10 @@
 // pages/home/homeDetail/homeDetail.js
 Page({
 
-  showAnswerResultsSheet:function() {
+  showAnswerResultsSheet: function() {
     // 方法返回 select index
-    this.selectComponent('#answerresultssheet').showAnswerResultsSheet(false,function(callback) {
-      console.log('answerresultssheet calback'+callback)
+    this.selectComponent('#answerresultssheet').showAnswerResultsSheet(false, function(callback) {
+      console.log('answerresultssheet calback' + callback)
     })
   },
 
@@ -18,10 +18,26 @@ Page({
     this.selectComponent('#photobrowser').setPics(this.data.pics)
     this.selectComponent('#photobrowser').showPhotoBrowser(false)
   },
+
+  pageImage: function() {
+    wx.navigateTo({
+      url: '/pages/photo/photo',
+    })
+  },
+  compImage: function() {
+
+  },
   /**
    * 页面的初始数据
    */
   data: {
+    list: [{
+      src: 'https://raw.githubusercontent.com/panmenglin/mp-photo-album/transform/common/images/Desert1.jpg', // 原图
+      previewSrc: 'https://raw.githubusercontent.com/panmenglin/mp-photo-album/transform/common/images/Desert1_1280.jpg', // 预览大图
+      listSrc: 'https://raw.githubusercontent.com/panmenglin/mp-photo-album/transform/common/images/Desert1_200.jpg', // 列表小图
+      desc: '图片描述', // 图片描述
+      check: false // 是否选中
+    }],
     options: [{
         option: 'A'
       },
@@ -42,41 +58,21 @@ Page({
       // },
     ],
     pics: [{
-        url: 'http://sowcar.com/t6/695/1554286026x2362277776.jpg',
+        url: 'https://picbed.quantuminit.com/a0b02a68780c40ae.png',
         unstudied: false
       },
       {
-        url: 'http://sowcar.com/t6/695/1554286071x1033062845.jpg',
+        url: 'https://picbed.quantuminit.com/04dfde76b6e4410a.png',
         unstudied: false
       },
       {
-        url: 'http://sowcar.com/t6/695/1554286126x2890173921.png',
+        url: 'https://picbed.quantuminit.com/7b0aea9fa816411d.png',
         unstudied: false
       },
       {
-        url: 'http://sowcar.com/t6/695/1554286071x1033062845.jpg',
+        url: 'https://picbed.quantuminit.com/a0b02a68780c40ae.png',
         unstudied: false
       },
-      {
-        url: 'http://sowcar.com/t6/695/1554286126x2890173921.png',
-        unstudied: false
-      },
-      {
-        url: 'http://sowcar.com/t6/695/1554286071x1033062845.jpg',
-        unstudied: false
-      },
-      {
-        url: 'http://sowcar.com/t6/695/1554286126x2890173921.png',
-        unstudied: false
-      },
-      {
-        url: 'http://sowcar.com/t6/695/1554286071x1033062845.jpg',
-        unstudied: false
-      },
-      {
-        url: 'http://sowcar.com/t6/695/1554286126x2890173921.png',
-        unstudied: false
-      }
     ],
   },
 

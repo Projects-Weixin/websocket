@@ -1,0 +1,17 @@
+<view class="navigation-bar" style="padding-top:{{paddingTop}}px;height:{{height}}px;line-height:{{height}}px;background:{{background}};color:{{color}};font-size:{{fontSize}};position:{{fixed&&'fixed'}};transform:translateY({{!show?-paddingTop-height+'px':'0'}});">
+  <!-- <view class="back" wx:if="{{back}}" style="padding-top:{{paddingTop}}px;height:{{height}}px;line-height:{{height}}px;" bind:tap="navigateBack">
+    <view class="icon-fanhui"></view>
+    <view class="back-home" wx:if="{{showHomeButton}}" style="">首页</view>
+  </view> -->
+  <view class="back" style="top:{{paddingTop+5}}px;left:5px" wx:if="{{showHomeButton}}">
+    <view class='navbar-iconView'  bindtap='navigateBack'>
+      <image class='navbar-icon' src='./image/navbar-back.png'></image>
+    </view>
+    <view class='navbar-iconView-line'></view>
+    <view class='navbar-iconView' bindtap='navigateBackHome'>
+      <image class='navbar-icon' src='./image/navbar-home.png'></image>
+    </view>
+  </view>
+  <view class="title">{{title!='none'?title:''}}</view>
+</view>
+<view class="navigation-bar-holder" wx:if="{{fixed && show}}" style="background:{{background}};padding-top:{{paddingTop}}px;height:{{height}}px;line-height:{{height}}px;width:750rpx;"></view>
