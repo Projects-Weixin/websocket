@@ -1,16 +1,17 @@
 const url = require('pages/urlservice.js');
 const ws = require('pages/wsservice.js');
+const guid = require('./utils/guid.js');
 
 //app.js
 App({
-  onShow:function() {
+  onShow: function() {
     console.log('app+show')
   },
-  onHide:function() {
+  onHide: function() {
     console.log('app+hide')
   },
-  
-  onLaunch: function () {
+
+  onLaunch: function() {
     // socket 连接
     // ws.webSocket.connectSocket()
 
@@ -21,10 +22,10 @@ App({
 
 
     var pages = getCurrentPages()
-    console.log('pages'+pages)
+    console.log('pages' + pages)
 
     for (var page in pages) {
-      console.log('page'+page)
+      console.log('page' + page)
     }
 
     // 展示本地存储能力
@@ -62,7 +63,7 @@ App({
           })
         }
       },
-      fail:res => {
+      fail: res => {
         console.log('getSetting' + JSON.stringify(res))
       }
     })
@@ -84,12 +85,43 @@ App({
   },
 
   globalData: {
-    systemInfo:{},
+    systemInfo: {},
     userInfo: null,
-    screen:{
-      width:0,
-      height:0
+    screen: {
+      width: 0,
+      height: 0
     }
+  },
+  //带参跳页
+  urlParams: {},
+  /**
+   * 重写navigateTo方法（页面URL，参数）
+   */
+  navigateTo: function(url, param) {
+    let strGuid = guid.newGuid();
+    this.urlParams[strGuid] = param;
+    wx.navigateTo({
+      url: url + '?guid=' + strGuid,
+    });
+  },
+  
+  /**
+   * 重写redirectTo方法（页面URL，参数）
+   */
+  redirectTo: function(url, param) {
+    let strGuid = guid.newGuid();
+    this.urlParams[strGuid] = param;
+    wx.redirectTo({
+      url: url + '?guid=' + strGuid,
+    });
+  },
+  /**
+   * onLoad中获取页面参数
+   */
+  getParam: function(query) {
+    let strGuid = query.guid;
+    return this.urlParams[strGuid];
   }
+
 
 })
