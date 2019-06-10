@@ -20,8 +20,9 @@ Page({
   },
 
   pageImage: function() {
+    var url = '/pages/photo/photo?key='+'11'
     wx.navigateTo({
-      url: '/pages/photo/photo',
+      url: url,
     })
   },
   compImage: function() {

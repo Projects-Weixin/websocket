@@ -6,3 +6,8 @@
 .log-item {
   margin: 10rpx;
 }
+
+.video {
+  width: 300px;
+  height: 600px;
+}
